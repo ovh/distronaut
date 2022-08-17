@@ -2,7 +2,7 @@
 
 **Distronaut** is a tool that travel through the internet to find distribution ISO download links and metadata, making it easier for you to monitor new releases or burn an install media.
 
-## ⌨️ CLI
+## ⌨️ CLI usage
 
 Use `fetch` command to retrieve a JSON from configured sources:
 ```bash
@@ -35,6 +35,24 @@ Output is similar to below:
 ```
 
 Additional metadata is scrapped from [distrowatch.com](https://distrowatch.com).
+
+## 👨‍💻 Programmatic usage
+
+This package can also be imported within another golang codebase:
+```go
+package main
+
+import (
+	"encoding/json"
+	"fmt"
+	"github.com/ovh/distronaut/pkg/distro"
+)
+
+func main() {
+	jd, _ := json.MarshalIndent(distro.FetchSources("config/sources.yml", "debian"), "", "  ")
+	fmt.Println(string(jd))
+}
+```
 
 ## 🌕 Configuring new sources
 
