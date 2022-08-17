@@ -1,0 +1,77 @@
+- name: Debian
+  url: https://cdimage.debian.org/debian-cd/:version/:arch/iso-cd/:iso
+  patterns:
+    :version: ^(\d+\.\d+(?:\.\d+)?)\/$
+    :arch: ^(amd64|arm64)\/$
+    :iso: ^debian-\k<version>-\k<arch>-netinst\.iso$
+    .hash.file: SHA256SUMS
+    .hash.algo: sha256
+    .hash.pattern: (?m)^([0-9a-f]{64})\s+\k<iso>
+    .meta.source: distrowatch
+    .meta.id: debian
+    .meta.version: (\d+)
+
+- name: Ubuntu
+  url: https://releases.ubuntu.com/:version/:iso
+  patterns:
+    :version: ^(\d+\.\d+(?:\.\d+)?)\/$
+    :iso: ^ubuntu-.*-server-.*\.iso$
+    .hash.file: SHA256SUMS
+    .hash.algo: sha256
+    .hash.pattern: (?m)^([0-9a-f]{64})\s+.*server-.*\.iso
+    .meta.source: distrowatch
+    .meta.id: ubuntu
+    .meta.version: (\d+\.\d+)
+
+- name: OpenSUSE
+  url: https://download.opensuse.org/distribution/:edition/:version/iso/:iso
+  patterns:
+    :edition: ^(leap|jump)\/$
+    :version: ^(\d+\.\d+(?:\.\d+)?)\/$
+    :iso: ^.*-Current\.iso$
+    .hash.file: \k<iso>.sha256
+    .hash.algo: sha256
+    .hash.pattern: (?m)^([0-9a-f]{64})\s+.*\.iso
+    .meta.source: distrowatch
+    .meta.id: opensuse
+    .meta.version: (\d+\.\d+)
+
+- name: FreeBSD
+  url: https://download.freebsd.org/releases/:arch/:arch2/ISO-IMAGES/:version/:iso
+  patterns:
+    :arch: ^(amd64|arm64)\/$
+    :arch2: \k<arch>
+    :version: ^(\d+\.\d+)\/$
+    :iso: ^.*-dvd1\.iso$
+    .hash.file: CHECKSUM.SHA256-FreeBSD
+    .hash.algo: sha256
+    .hash.pattern: (?m)^SHA256 \(\k<iso>\) = ([0-9a-f]{64})
+    .meta.source: distrowatch
+    .meta.id: freebsd
+    .meta.version: (\d+\.\d+)
+
+- name: Fedora
+  url: https://download.fedoraproject.org/pub/fedora/linux/releases/:version/:edition/:arch/iso/:iso
+  patterns:
+    :version: ^(\d+)\/$
+    :edition: ^(Workstation)\/$
+    :arch: ^(x86_64)\/$
+    :iso: ^.*\.iso$
+    .hash.file: ^.*-CHECKSUM$
+    .hash.algo: sha256
+    .hash.pattern: (?m)^SHA256 \(\k<iso>\) = ([0-9a-f]{64})
+    .meta.source: distrowatch
+    .meta.id: fedora
+    .meta.version: (\d+)
+
+- name: Mint (cinnamon)
+  url: https://mirrors.edge.kernel.org/linuxmint/stable/:version/:iso
+  patterns:
+    :version: ^(\d+(?:\.\d+))\/$
+    :iso: ^.*cinnamon-.*\.iso$
+    .hash.file: sha256sum.txt
+    .hash.algo: sha256
+    .hash.pattern: (?m)^([0-9a-f]{64})\s+.*cinnamon-.*\.iso
+    .meta.source: distrowatch
+    .meta.id: mint
+    .meta.version: (\d+)
