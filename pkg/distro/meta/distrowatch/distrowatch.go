@@ -1,15 +1,15 @@
 package distrowatch
 
 import (
-	log "github.com/sirupsen/logrus"
+	"fmt"
 	"github.com/antchfx/htmlquery"
 	"github.com/antchfx/xpath"
-	"fmt"
+	log "github.com/sirupsen/logrus"
 	"strings"
 )
 
-//Metadata about distribution
-func About(id string) (map[string]string) {
+// Metadata about distribution
+func About(id string) map[string]string {
 	meta := make(map[string]string)
 	if id == "" {
 		return meta
@@ -58,8 +58,8 @@ func About(id string) (map[string]string) {
 	return meta
 }
 
-//Metadata about version 
-func AboutVersion(id string, version string) (map[string]string) {
+// Metadata about version
+func AboutVersion(id string, version string) map[string]string {
 	meta := make(map[string]string)
 	if id == "" || version == "" {
 		return meta

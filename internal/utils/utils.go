@@ -51,7 +51,7 @@ func ParseRegex(pattern string, str string) map[string]string {
 }
 
 // Execute regex and return first captured group
-func RegexCapture(pattern string, str string) (string) {
+func RegexCapture(pattern string, str string) string {
 	//Execute regex
 	r := regexp.MustCompile(pattern)
 	matches := r.FindStringSubmatch(str)
@@ -75,7 +75,7 @@ func copyMap(mp map[string]string) map[string]string {
 }
 
 // Remove duplicates from array
-func unique(arr []string) ([]string){
+func unique(arr []string) []string {
 	var set []string
 	has := make(map[string]bool)
 	for _, v := range arr {
@@ -83,6 +83,6 @@ func unique(arr []string) ([]string){
 			has[v] = true
 			set = append(set, v)
 		}
-	} 
+	}
 	return set
 }

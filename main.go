@@ -1,11 +1,11 @@
 package main
 
 import (
-  log "github.com/sirupsen/logrus"
-  "github.com/ovh/distronaut/cmd"
+	"github.com/ovh/distronaut/cmd"
+	log "github.com/sirupsen/logrus"
 )
 
 func main() {
-  log.SetLevel(log.DebugLevel)
-  cmd.Execute()
+	log.SetLevel(log.DebugLevel)
+	cmd.Execute()
 }

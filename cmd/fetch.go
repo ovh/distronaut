@@ -5,10 +5,9 @@ import (
 
 	"github.com/spf13/cobra"
 
-	"github.com/ovh/distronaut/pkg/distro"
 	"encoding/json"
+	"github.com/ovh/distronaut/pkg/distro"
 	"os"
-
 )
 
 var config string
@@ -18,7 +17,7 @@ var fetchCmd = &cobra.Command{
 	Use:   "fetch",
 	Short: "Fetch available distribution links from sources",
 	Run: func(cmd *cobra.Command, args []string) {
-		jd, err := json.MarshalIndent(distro.Fetch(config, filter), "", "  ")
+		jd, err := json.MarshalIndent(distro.FetchSources(config, filter), "", "  ")
 		if err != nil {
 			fmt.Errorf("%s", err)
 			os.Exit(1)

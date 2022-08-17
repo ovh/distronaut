@@ -4,20 +4,20 @@ import (
 	"fmt"
 	"github.com/antchfx/htmlquery"
 	log "github.com/sirupsen/logrus"
+	"io"
+	"net/http"
 	"net/url"
+	"path"
 	"regexp"
 	"strings"
-	"net/http"
-	"io"
-	"path"
 )
 
 // Link structure
 type Link struct {
-	Url          string `json:url`
-	Hash         string `json:hash`
-	Version      string `json:version`
-	Arch  		 string `json:arch`
+	Url     string `json:url`
+	Hash    string `json:hash`
+	Version string `json:version`
+	Arch    string `json:arch`
 }
 
 // Version regex
@@ -45,7 +45,7 @@ func Scrap(uri string, pats map[string]string) []*Link {
 	ls := unique(scrap(hs, ps, pats, vars))
 	var links []*Link
 	for _, l := range ls {
-		links = append(links, &Link{Url:l})
+		links = append(links, &Link{Url: l})
 	}
 	if pats[".hash.file"] != "" && pats[".hash.algo"] != "" && pats[".hash.pattern"] != "" {
 		scrapHashes(links, pats)
@@ -140,19 +140,19 @@ func scrapHashes(links []*Link, pats map[string]string) {
 		//Fetch manifest
 		hlink, _ := url.JoinPath(link.Url, "..", hfile)
 		res, err := http.Get(hlink)
-	   	if err != nil {
-	   		log.Warnf("failed to open <%s> (%s)", hlink, err)
-	   		continue
-	   	}
-	   	log.Debugf("read <%s>", hlink)
-	   	defer res.Body.Close()
+		if err != nil {
+			log.Warnf("failed to open <%s> (%s)", hlink, err)
+			continue
+		}
+		log.Debugf("read <%s>", hlink)
+		defer res.Body.Close()
 
 		//Read manifest
-	   	body, err := io.ReadAll(res.Body)
-	   	if err != nil {
-	   		log.Warnf("failed to read <%s> (%s)", hlink, err)
-	   		continue
-	   	}
+		body, err := io.ReadAll(res.Body)
+		if err != nil {
+			log.Warnf("failed to read <%s> (%s)", hlink, err)
+			continue
+		}
 
 		//Extract hash
 		hash := RegexCapture(scrapPattern(pats[".hash.pattern"], vars), string(body))
@@ -171,11 +171,11 @@ func scrapMeta(links []*Link, pats map[string]string) {
 		ea := regexp.MustCompile(REG_ARCH)
 		version := RegexCapture(REG_VERSION, ea.ReplaceAllString(link.Url, "arch"))
 		if version != "" {
-			link.Version = version			
+			link.Version = version
 			log.Debugf("found meta version: %s", link.Version)
 		}
 
-		//Parse arch	
+		//Parse arch
 		arch := RegexCapture(REG_ARCH, link.Url)
 		if arch != "" {
 			link.Arch = arch
