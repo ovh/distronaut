@@ -4,7 +4,10 @@ import (
 	"github.com/antchfx/htmlquery"
 	log "github.com/sirupsen/logrus"
 	"golang.org/x/net/html"
+	"net/url"
+	"path"
 	"regexp"
+	"strings"
 )
 
 // Query matching nodes from given selector
@@ -85,4 +88,21 @@ func unique(arr []string) []string {
 		}
 	}
 	return set
+}
+
+// Polyfill for url.JoinPath added in golang 1.19
+func urlJoinPath(base string, elem ...string) (string, error) {
+	u, err := url.Parse(base)
+	if err != nil {
+		return "", err
+	}
+	if len(elem) > 0 {
+		elem = append([]string{u.EscapedPath()}, elem...)
+		p := path.Join(elem...)
+		if strings.HasSuffix(elem[len(elem)-1], "/") && !strings.HasSuffix(p, "/") {
+			p += "/"
+		}
+		u.Path = p
+	}
+	return u.String(), nil
 }

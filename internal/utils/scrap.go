@@ -78,7 +78,7 @@ func scrap(curr string, ps []string, pats map[string]string, vars map[string]str
 
 				//Extract link href
 				href := htmlquery.SelectAttr(a, "href")
-				next, _ := url.JoinPath(curr, href)
+				next, _ := urlJoinPath(curr, href)
 
 				//Set route value (if a capturing group exists)
 				nvars := copyMap(vars)
@@ -97,7 +97,7 @@ func scrap(curr string, ps []string, pats map[string]string, vars map[string]str
 		}
 
 		//Continue navigation
-		curr, _ = url.JoinPath(curr, p)
+		curr, _ = urlJoinPath(curr, p)
 	}
 	links = append(links, curr)
 	return links
@@ -120,7 +120,7 @@ func scrapHashes(links []*Link, pats map[string]string) {
 		log.Debugf("searching hash for: %s", iso)
 
 		//Read manifest
-		page, _ := url.JoinPath(link.Url, "..")
+		page, _ := urlJoinPath(link.Url, "..")
 		pat := strings.Replace(pats[".hash.file"], `\k<iso>`, iso, -1)
 
 		doc, err := htmlquery.LoadURL(page)
@@ -138,7 +138,7 @@ func scrapHashes(links []*Link, pats map[string]string) {
 		log.Debugf("found hash file: %s", hfile)
 
 		//Fetch manifest
-		hlink, _ := url.JoinPath(link.Url, "..", hfile)
+		hlink, _ := urlJoinPath(link.Url, "..", hfile)
 		res, err := http.Get(hlink)
 		if err != nil {
 			log.Warnf("failed to open <%s> (%s)", hlink, err)
