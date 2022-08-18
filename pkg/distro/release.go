@@ -38,6 +38,11 @@ type Source struct {
 	Patterns map[string]string
 }
 
+// Set log level
+func SetLogLevel(lv log.Level) {
+	log.SetLevel(lv)
+}
+
 // Fetch sources from configuration file
 func FetchSources(path string, filter string) []*Release {
 	var rs []*Release
@@ -47,7 +52,12 @@ func FetchSources(path string, filter string) []*Release {
 		return rs
 	}
 	for _, s := range src {
-		rs = append(rs, fetch(s.Name, s.Url, s.Patterns))
+		r, err := fetch(s.Name, s.Url, s.Patterns)
+		if err != nil {
+			log.Errorf("failed to fetch source: <%s> (%s)", s.Name, err)
+			continue
+		}
+		rs = append(rs, r)
 	}
 	return rs
 }
@@ -79,7 +89,7 @@ func ListSources(path string, filter string) ([]*Source, error) {
 }
 
 // Fetch release and versions
-func fetch(source string, uri string, pats map[string]string) *Release {
+func fetch(source string, uri string, pats map[string]string) (*Release, error) {
 	// Fetch metadata
 	if pats[".meta.source"] != "distrowatch" {
 		log.Warnf("unsupported meta source: %s", pats[".meta.source"])
@@ -88,7 +98,10 @@ func fetch(source string, uri string, pats map[string]string) *Release {
 	r := &Release{Source: source, Family: meta["family"], Documentation: meta["documentation"], Website: meta["website"], Distribution: meta["distribution"], Status: meta["status"]}
 
 	// Fetch links and metadata
-	links := utils.Scrap(uri, pats)
+	links, err := utils.Scrap(uri, pats)
+	if err != nil {
+		return nil, err
+	}
 	for _, link := range links {
 		v := &Version{Url: link.Url, Hash: link.Hash, Version: link.Version, Arch: link.Arch}
 		v.Meta = distrowatch.AboutVersion(pats[".meta.id"], utils.RegexCapture(pats[".meta.version"], link.Version))
@@ -97,8 +110,11 @@ func fetch(source string, uri string, pats map[string]string) *Release {
 
 	// Debug
 	log.Debugf("found: %+v", r)
-	j, _ := json.Marshal(r)
+	j, err := json.Marshal(r)
+	if err != nil {
+		log.Warnf("failed to marshall json, it may be invalid (%s)", err)
+	}
 	log.Debugf(string(j))
 
-	return r
+	return r, nil
 }

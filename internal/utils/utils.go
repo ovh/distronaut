@@ -94,6 +94,7 @@ func unique(arr []string) []string {
 func urlJoinPath(base string, elem ...string) (string, error) {
 	u, err := url.Parse(base)
 	if err != nil {
+		log.Warnf("failed to parse url: %s (%s)", base, err)
 		return "", err
 	}
 	if len(elem) > 0 {

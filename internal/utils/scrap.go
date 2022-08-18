@@ -27,9 +27,14 @@ const REG_VERSION = `(?P<version>\d+[-.]\d+(?:[-.]\d+)?)`
 const REG_ARCH = `(?P<arch>i386|amd(?:64)?|arm(?:64)?(?:el|hf)?|mips(?:64)?(?:el)?|ppc(?:64)?(?:el)?|s390x?|x86_64|(?:32|64)bits?)`
 
 // Scrap a distribution mirror
-func Scrap(uri string, pats map[string]string) []*Link {
+func Scrap(uri string, pats map[string]string) ([]*Link, error) {
+	var links []*Link
+
 	//Parse url
-	u, _ := url.Parse(uri)
+	u, err := url.Parse(uri)
+	if err != nil {
+		return links, err
+	}
 
 	//Extract domain
 	hs := fmt.Sprintf("%s://%s", u.Scheme, u.Hostname())
@@ -42,8 +47,10 @@ func Scrap(uri string, pats map[string]string) []*Link {
 	vars := make(map[string]string)
 
 	//Scrap links and hashes
-	ls := unique(scrap(hs, ps, pats, vars))
-	var links []*Link
+	ls, err := scrap(hs, ps, pats, vars)
+	if err != nil {
+		return links, err
+	}
 	for _, l := range ls {
 		links = append(links, &Link{Url: l})
 	}
@@ -56,12 +63,13 @@ func Scrap(uri string, pats map[string]string) []*Link {
 	for _, link := range links {
 		log.Debugf("found: %+v", link)
 	}
-	return links
+	return links, nil
 }
 
 // Scrap a distribution mirror (recursive function)
-func scrap(curr string, ps []string, pats map[string]string, vars map[string]string) []string {
+func scrap(curr string, ps []string, pats map[string]string, vars map[string]string) ([]string, error) {
 	var links []string
+	var err error
 	for i, p := range ps {
 
 		//Handle route param
@@ -73,12 +81,20 @@ func scrap(curr string, ps []string, pats map[string]string, vars map[string]str
 			log.Debugf("searching for: %s", pat)
 
 			//Iterate over matching links
-			as, _ := querySelector(curr, fmt.Sprintf(`//a[matches(@href, '%s')]`, pat))
+			as, err := querySelector(curr, fmt.Sprintf(`//a[matches(@href, '%s')]`, pat))
+			if err != nil {
+				log.Warnf("failed to execute query selector at: %S (%s)", curr, err)
+				continue
+			}
 			for _, a := range as {
 
 				//Extract link href
 				href := htmlquery.SelectAttr(a, "href")
-				next, _ := urlJoinPath(curr, href)
+				next, err := urlJoinPath(curr, href)
+				if err != nil {
+					log.Warnf("failed to build link: <%s> <%s> (%s)", curr, href, err)
+					continue
+				}
 
 				//Set route value (if a capturing group exists)
 				nvars := copyMap(vars)
@@ -91,16 +107,24 @@ func scrap(curr string, ps []string, pats map[string]string, vars map[string]str
 				}
 
 				//Resume link building
-				links = append(links, scrap(next, ps[i+1:], pats, nvars)...)
+				nexted, err := scrap(next, ps[i+1:], pats, nvars)
+				if err != nil {
+					log.Warnf("failed to scrap link: <%s> (%s)", next, err)
+					continue
+				}
+				links = unique(append(links, nexted...))
 			}
-			return links
+			return links, nil
 		}
 
 		//Continue navigation
-		curr, _ = urlJoinPath(curr, p)
+		curr, err = urlJoinPath(curr, p)
+		if err != nil {
+			return links, err
+		}
 	}
-	links = append(links, curr)
-	return links
+	links = unique(append(links, curr))
+	return links, nil
 }
 
 // Template a scrap regex pattern with a context map string
@@ -120,7 +144,11 @@ func scrapHashes(links []*Link, pats map[string]string) {
 		log.Debugf("searching hash for: %s", iso)
 
 		//Read manifest
-		page, _ := urlJoinPath(link.Url, "..")
+		page, err := urlJoinPath(link.Url, "..")
+		if err != nil {
+			log.Warnf("failed to build hash file url (%s), ignoring", err)
+			continue
+		}
 		pat := strings.Replace(pats[".hash.file"], `\k<iso>`, iso, -1)
 
 		doc, err := htmlquery.LoadURL(page)
@@ -138,7 +166,11 @@ func scrapHashes(links []*Link, pats map[string]string) {
 		log.Debugf("found hash file: %s", hfile)
 
 		//Fetch manifest
-		hlink, _ := urlJoinPath(link.Url, "..", hfile)
+		hlink, err := urlJoinPath(link.Url, "..", hfile)
+		if err != nil {
+			log.Warnf("failed to build hash file url (%s), ignoring", err)
+			continue
+		}
 		res, err := http.Get(hlink)
 		if err != nil {
 			log.Warnf("failed to open <%s> (%s)", hlink, err)

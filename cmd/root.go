@@ -15,7 +15,10 @@ var rootCmd = &cobra.Command{
 	Use:   "distronaut",
 	Short: "Distronaut is a tool to fetch iso download links and metadata from across the web",
 	PersistentPreRun: func(cmd *cobra.Command, args []string) {
-		lv, _ := log.ParseLevel(loglevel)
+		lv, err := log.ParseLevel(loglevel)
+		if err != nil {
+			log.Warnf("failed to parse loglevel: %s (%s)", loglevel, err)
+		}
 		log.SetLevel(lv)
 	},
 }
