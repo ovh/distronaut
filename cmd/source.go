@@ -10,11 +10,16 @@ import (
 	"os"
 )
 
-var fetchCmd = &cobra.Command{
-	Use:   "fetch",
-	Short: "Fetch available distribution links from configured sources (may take some time)",
+var sourceCmd = &cobra.Command{
+	Use:   "source",
+	Short: "List configured sources",
 	Run: func(cmd *cobra.Command, args []string) {
-		j, err := json.MarshalIndent(distro.FetchSources(config, filter), "", "  ")
+		src, err := distro.ListSources(config, filter)
+		if err != nil {
+			fmt.Errorf("%s", err)
+			os.Exit(1)
+		}
+		j, err := json.MarshalIndent(src, "", "  ")
 		if err != nil {
 			fmt.Errorf("%s", err)
 			os.Exit(1)
