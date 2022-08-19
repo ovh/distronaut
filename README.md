@@ -1,6 +1,6 @@
 # 🚀 Distronaut
 
-**Distronaut** is a tool that travel through the internet to find distribution ISO download links and metadata, making it easier for you to monitor new releases or burn an install media.
+**Distronaut** is a tool that travel through the internet to find distribution ISO links and metadata, making it easier for you to monitor new releases, burn install medias or build your own ISO bank archive.
 
 ## ⌨️ CLI usage
 
@@ -34,7 +34,7 @@ Output is similar to below:
 ]
 ```
 
-Additional metadata is scrapped from [distrowatch.com](https://distrowatch.com).
+Additional metadata are scrapped from [distrowatch.com](https://distrowatch.com).
 
 ## 👨‍💻 Programmatic usage
 
@@ -49,8 +49,9 @@ import (
 )
 
 func main() {
-	jd, _ := json.MarshalIndent(distro.FetchSources("config/sources.yml", "debian"), "", "  ")
-	fmt.Println(string(jd))
+	src, _ := distro.FetchSources("config/sources.yml", "debian")
+	j, _ := json.MarshalIndent(src, "", "  ")
+	fmt.Println(string(j))
 }
 ```
 
@@ -61,10 +62,16 @@ Open your configuration file and add a new entry, containing:
 - `url` is the source url pattern
   - each *route parameter* is indicated by a colon (`:`)
 - `patterns` is a map containing:
-  - `:*` regexs patterns that are matched by *route parameter*
+  - `:*` are regex patterns that are matched by defined *route parameter*
     - each *route parameter* can be back-referenced using `\k<:name>` syntax
   - `.hash.*` contains all hash related settings 
+    - `.hash.file` is a regex pattern matching the file containing hashes 
+    - `.hash.pattern` is a regex pattern capturing the hash from a given iso (that can be back-referenced with `\k<iso>`)
+    - `.hash.algo` is the name of the hash algorithm
   - `.meta.*` contains all metadata related settings
+    - `.meta.source` must be set to `distrowatch` (only metadata source supported for now)
+    - `.meta.id` is the distro handle on distrowatch
+    - `.meta.version` is a regex pattern matching the version as it is referenced on distrowatch
 
 Example source:
 ```yml
