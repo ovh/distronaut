@@ -33,9 +33,9 @@ type Version struct {
 
 // Source structure
 type Source struct {
-	Name     string `yaml:string`
-	Url      string `yaml:string`
-	Patterns map[string]string
+	Name     string            `yaml:name`
+	Url      string            `yaml:url`
+	Patterns map[string]string `yaml:patterns`
 }
 
 // Set log level
@@ -44,12 +44,12 @@ func SetLogLevel(lv log.Level) {
 }
 
 // Fetch sources from configuration file
-func FetchSources(path string, filter string) []*Release {
+func FetchSources(path string, filter string) ([]*Release, error) {
 	var rs []*Release
 	src, err := ListSources(path, filter)
 	if err != nil {
 		log.Errorf("failed to parse sources (%s)", err)
-		return rs
+		return rs, err
 	}
 	for _, s := range src {
 		r, err := fetch(s.Name, s.Url, s.Patterns)
@@ -59,7 +59,10 @@ func FetchSources(path string, filter string) []*Release {
 		}
 		rs = append(rs, r)
 	}
-	return rs
+	if len(rs) < len(src) {
+		err = fmt.Errorf("%d/%d sources successfully fetched", len(rs), len(src))
+	}
+	return rs, err
 }
 
 // List sources from configuration file
@@ -110,10 +113,7 @@ func fetch(source string, uri string, pats map[string]string) (*Release, error) 
 
 	// Debug
 	log.Debugf("found: %+v", r)
-	j, err := json.Marshal(r)
-	if err != nil {
-		log.Warnf("failed to marshall json, it may be invalid (%s)", err)
-	}
+	j, _ := json.Marshal(r)
 	log.Debugf(string(j))
 
 	return r, nil

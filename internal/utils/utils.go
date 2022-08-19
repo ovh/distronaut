@@ -31,28 +31,6 @@ func querySelector(uri string, sel string) ([]*html.Node, error) {
 	return ns, nil
 }
 
-// Execute regex and stores named groups into a string map
-func ParseRegex(pattern string, str string) map[string]string {
-	//Execute regex
-	r := regexp.MustCompile(pattern)
-	parsed := make(map[string]string)
-	matches := r.FindStringSubmatch(str)
-	if len(matches) == 0 {
-		log.Warnf("no matches: <%s> <%s>", pattern, str)
-		return parsed
-	}
-
-	//Convert named groups to string map
-	parsed["*"] = matches[0]
-	for i, name := range r.SubexpNames() {
-		if i > 0 && i <= len(matches) {
-			parsed[name] = matches[i]
-			log.Debugf("parsed group: <%s> = <%s>", name, parsed[name])
-		}
-	}
-	return parsed
-}
-
 // Execute regex and return first captured group
 func RegexCapture(pattern string, str string) string {
 	//Execute regex

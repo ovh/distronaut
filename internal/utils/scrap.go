@@ -37,7 +37,7 @@ func Scrap(uri string, pats map[string]string) ([]*Link, error) {
 	}
 
 	//Extract domain
-	hs := fmt.Sprintf("%s://%s", u.Scheme, u.Hostname())
+	hs := fmt.Sprintf("%s://%s", u.Scheme, u.Host)
 
 	//Split path (wihtout leading empty one)
 	ps := strings.Split(u.Path, "/")
@@ -83,7 +83,7 @@ func scrap(curr string, ps []string, pats map[string]string, vars map[string]str
 			//Iterate over matching links
 			as, err := querySelector(curr, fmt.Sprintf(`//a[matches(@href, '%s')]`, pat))
 			if err != nil {
-				log.Warnf("failed to execute query selector at: %S (%s)", curr, err)
+				log.Warnf("failed to execute query selector at: %s (%s)", curr, err)
 				continue
 			}
 			for _, a := range as {
@@ -157,7 +157,11 @@ func scrapHashes(links []*Link, pats map[string]string) {
 			continue
 		}
 
-		a := htmlquery.FindOne(doc, fmt.Sprintf(`//a[matches(@href, '%s')]`, pat))
+		a, err := htmlquery.Query(doc, fmt.Sprintf(`//a[matches(@href, '%s')]`, pat))
+		if err != nil {
+			log.Warnf("invalid pattern: <%s> (%s)", pat, err)
+			continue
+		}
 		if a == nil {
 			log.Warnf("no match for hash file: <%s>", pat)
 			continue
@@ -198,17 +202,22 @@ func scrapHashes(links []*Link, pats map[string]string) {
 func scrapMeta(links []*Link, pats map[string]string) {
 	for _, link := range links {
 		log.Debugf("parsing meta: %s", link.Url)
+		u, err := url.Parse(link.Url)
+		if err != nil {
+			log.Warnf("failed to parse url: %s (%s)", link.Url, err)
+			continue
+		}
 
 		//Parse version (remove arch to avoid collisions)
 		ea := regexp.MustCompile(REG_ARCH)
-		version := RegexCapture(REG_VERSION, ea.ReplaceAllString(link.Url, "arch"))
+		version := RegexCapture(REG_VERSION, ea.ReplaceAllString(u.Path, "arch"))
 		if version != "" {
 			link.Version = version
 			log.Debugf("found meta version: %s", link.Version)
 		}
 
 		//Parse arch
-		arch := RegexCapture(REG_ARCH, link.Url)
+		arch := RegexCapture(REG_ARCH, u.Path)
 		if arch != "" {
 			link.Arch = arch
 			log.Debugf("found meta arch: %s", link.Arch)
