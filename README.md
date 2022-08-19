@@ -89,6 +89,22 @@ Example source:
     .meta.version: (\d+)
 ```
 
+# 💪 Contributing
+
+Please read our contribution guidelines first ([CONTRIBUTING.md](https://github.com/ovh/distronaut/blob/master/CONTRIBUTING.md)).
+
+## 🧪 Testing
+
+Start mocked server:
+```bash
+go run tests/server.go
+```
+
+Run tests using:
+```bash
+go test ./...
+```
+
 # 📜 License
  
 ```
