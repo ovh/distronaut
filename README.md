@@ -2,11 +2,26 @@
 
 **Distronaut** is a tool that travel through the internet to find distribution ISO links and metadata, making it easier for you to monitor new releases, burn install medias or build your own ISO bank archive.
 
-## ⌨️ CLI usage
+## ⌨️ CLI
+
+### 🔨 Installation
+
+Using a pre-built binary:
+```bash
+go install github.com/ovh/distronaut@latest
+```
+
+Building from source
+```bash
+make
+chmod +x distronaut
+```
+
+### 🪛 Usage
 
 Use `fetch` command to retrieve a JSON from configured sources:
 ```bash
-go run main.go fetch -c config/sources.yml -f 'debian'
+distronaut fetch -c config/sources.yml -f 'debian'
 ```
 
 Output is similar to below:
@@ -95,15 +110,12 @@ Please read our contribution guidelines first ([CONTRIBUTING.md](https://github.
 
 ## 🧪 Testing
 
-Start mocked server:
-```bash
-go run tests/server.go
-```
-
 Run tests using:
 ```bash
-go test ./...
+make test
 ```
+
+A mocked server will temporary be spawned on port 3000 to avoid performing real network requests.
 
 # 📜 License
  
