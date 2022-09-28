@@ -38,6 +38,9 @@ func Scrap(uri string, pats map[string]string) ([]*Link, error) {
 
 	//Extract domain
 	hs := fmt.Sprintf("%s://%s", u.Scheme, u.Host)
+	if u.User.String() != "" {
+		hs = fmt.Sprintf("%s://%s@%s", u.Scheme, u.User, u.Host)
+	}
 
 	//Split path (wihtout leading empty one)
 	ps := strings.Split(u.Path, "/")
@@ -121,6 +124,11 @@ func scrap(curr string, ps []string, pats map[string]string, vars map[string]str
 		curr, err = urlJoinPath(curr, p)
 		if err != nil {
 			return links, err
+		}
+
+		//Handle trailing slash option
+		if pats[".opts.trailing-slash"] != "" && curr[len(curr)-1:] != "/" {
+			curr += "/"
 		}
 	}
 	links = unique(append(links, curr))
