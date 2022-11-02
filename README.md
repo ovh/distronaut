@@ -14,7 +14,6 @@ go install github.com/ovh/distronaut@latest
 Building from source
 ```bash
 make
-chmod +x distronaut
 ```
 
 ### 🪛 Usage
