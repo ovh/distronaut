@@ -10,11 +10,8 @@ jobs:
   ci:
     runs-on: self-hosted
     strategy:
-      fail-fast: true
-      max-parallel: 1
       matrix:
-        command: 
-          - tidy
+        command:
           - fmt
           - vet
           - test
