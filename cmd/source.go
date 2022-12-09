@@ -1,12 +1,11 @@
 package cmd
 
 import (
-	"fmt"
-
-	"github.com/spf13/cobra"
-
 	"encoding/json"
+	"fmt"
 	"github.com/ovh/distronaut/pkg/distro"
+	log "github.com/sirupsen/logrus"
+	"github.com/spf13/cobra"
 	"os"
 )
 
@@ -16,12 +15,12 @@ var sourceCmd = &cobra.Command{
 	Run: func(cmd *cobra.Command, args []string) {
 		src, err := distro.ListSources(config, filter)
 		if err != nil {
-			fmt.Errorf("%s", err)
+			log.Errorf("%s", err)
 			os.Exit(1)
 		}
 		j, err := json.MarshalIndent(src, "", "  ")
 		if err != nil {
-			fmt.Errorf("%s", err)
+			log.Errorf("%s", err)
 			os.Exit(1)
 		}
 		fmt.Println(string(j))

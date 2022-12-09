@@ -13,29 +13,30 @@ import (
 
 // Release structure
 type Release struct {
-	Source        string     `json:source`
-	Family        string     `json:family`
-	Distribution  string     `json:distribution`
-	Website       string     `json:website`
-	Documentation string     `json:documentation`
-	Status        string     `json:status`
-	Versions      []*Version `json:versions`
+	Source        string     `json:"source"`
+	Family        string     `json:"family"`
+	Distribution  string     `json:"distribution"`
+	Website       string     `json:"website"`
+	Documentation string     `json:"documentation"`
+	Status        string     `json:"status"`
+	Logo          string     `json:"logo"`
+	Versions      []*Version `json:"versions"`
 }
 
 // Version structure
 type Version struct {
-	Url     string            `json:url`
-	Hash    string            `json:hash`
-	Version string            `json:version`
-	Arch    string            `json:arch`
-	Meta    map[string]string `json:meta`
+	Url     string            `json:"url"`
+	Hash    string            `json:"hash"`
+	Version string            `json:"version"`
+	Arch    string            `json:"arch"`
+	Meta    map[string]string `json:"meta"`
 }
 
 // Source structure
 type Source struct {
-	Name     string            `yaml:name`
-	Url      string            `yaml:url`
-	Patterns map[string]string `yaml:patterns`
+	Name     string            `yaml:"name"`
+	Url      string            `yaml:"url"`
+	Patterns map[string]string `yaml:"patterns"`
 }
 
 // Set log level
@@ -98,7 +99,7 @@ func fetch(source string, uri string, pats map[string]string) (*Release, error) 
 		log.Warnf("unsupported meta source: %s", pats[".meta.source"])
 	}
 	meta := distrowatch.About(pats[".meta.id"])
-	r := &Release{Source: source, Family: meta["family"], Documentation: meta["documentation"], Website: meta["website"], Distribution: meta["distribution"], Status: meta["status"]}
+	r := &Release{Source: source, Family: meta["family"], Documentation: meta["documentation"], Website: meta["website"], Distribution: meta["distribution"], Status: meta["status"], Logo: meta["logo"]}
 
 	// Fetch links and metadata
 	links, err := utils.Scrap(uri, pats)

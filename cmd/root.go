@@ -10,6 +10,7 @@ import (
 var config string
 var filter string
 var loglevel string
+var outputFile string
 
 var rootCmd = &cobra.Command{
 	Use:   "distronaut",
@@ -31,6 +32,7 @@ func Execute() {
 }
 
 func init() {
+	fetchCmd.PersistentFlags().StringVarP(&outputFile, "save", "o", "", "output file")
 	rootCmd.AddCommand(fetchCmd)
 	rootCmd.AddCommand(sourceCmd)
 	rootCmd.PersistentFlags().StringVarP(&loglevel, "log", "l", "warn", "log level")

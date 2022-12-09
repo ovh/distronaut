@@ -54,6 +54,12 @@ func About(id string) map[string]string {
 		meta["documentation"] = strings.TrimSpace(lines[0])
 	}
 
+	//Logo
+	n = htmlquery.FindOne(doc, `//*[@class = 'TablesTitle']//img`)
+	if n != nil {
+		meta["logo"] = htmlquery.SelectAttr(n, "src")
+	}
+
 	log.Debugf("about %s: %+v", id, meta)
 	return meta
 }
@@ -80,7 +86,7 @@ func AboutVersion(id string, version string) map[string]string {
 	}
 	i := int(expr.Evaluate(htmlquery.CreateXPathNavigator(doc)).(float64))
 	if i == 0 {
-		log.Warnf("no match for <%s>", version)
+		log.Debugf("no match for <%s>", version)
 		return meta
 	}
 	log.Debugf("distrowatch column for %s: %d", id, i)

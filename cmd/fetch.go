@@ -1,13 +1,13 @@
 package cmd
 
 import (
-	"fmt"
-
-	"github.com/spf13/cobra"
-
 	"encoding/json"
+	"fmt"
 	"github.com/ovh/distronaut/pkg/distro"
+	log "github.com/sirupsen/logrus"
+	"github.com/spf13/cobra"
 	"os"
+	"path/filepath"
 )
 
 var fetchCmd = &cobra.Command{
@@ -16,14 +16,31 @@ var fetchCmd = &cobra.Command{
 	Run: func(cmd *cobra.Command, args []string) {
 		src, err := distro.FetchSources(config, filter)
 		if err != nil {
-			fmt.Errorf("%s", err)
+			log.Errorf("%s", err)
 			os.Exit(1)
 		}
 		j, err := json.MarshalIndent(src, "", "  ")
 		if err != nil {
-			fmt.Errorf("%s", err)
+			log.Errorf("%s", err)
 			os.Exit(1)
 		}
-		fmt.Println(string(j))
+		if outputFile != "" {
+			if err := os.MkdirAll(filepath.Dir(outputFile), os.ModePerm); err != nil {
+				log.Errorf("%s", err)
+				os.Exit(1)
+			}
+			f, err := os.Create(outputFile)
+			if err != nil {
+				log.Errorf("%s", err)
+				os.Exit(1)
+			}
+			defer f.Close()
+			if _, err := f.Write(j); err != nil {
+				log.Errorf("%s", err)
+				os.Exit(1)
+			}
+		} else {
+			fmt.Println(string(j))
+		}
 	},
 }

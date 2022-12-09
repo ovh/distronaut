@@ -14,10 +14,10 @@ import (
 
 // Link structure
 type Link struct {
-	Url     string `json:url`
-	Hash    string `json:hash`
-	Version string `json:version`
-	Arch    string `json:arch`
+	Url     string `json:"url"`
+	Hash    string `json:"hash"`
+	Version string `json:"version"`
+	Arch    string `json:"arch"`
 }
 
 // Version regex

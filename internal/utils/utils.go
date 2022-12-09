@@ -26,7 +26,7 @@ func querySelector(uri string, sel string) ([]*html.Node, error) {
 		log.Warnf("%s", err)
 	}
 	if len(ns) == 0 {
-		log.Warnf("no match for <%s>", sel)
+		log.Debugf("no match for <%s>", sel)
 	}
 	return ns, nil
 }
@@ -37,11 +37,11 @@ func RegexCapture(pattern string, str string) string {
 	r := regexp.MustCompile(pattern)
 	matches := r.FindStringSubmatch(str)
 	if len(matches) < 2 {
-		log.Warnf("no matches: <%s> <%s>", pattern, str)
+		log.Debugf("no matches: <%s> <%s>", pattern, str)
 		return ""
 	}
 	if len(matches) > 2 {
-		log.Warnf("multiple group matches: <%s> <%s> <%+v>", pattern, str, matches[1:])
+		log.Debugf("multiple group matches: <%s> <%s> <%+v>", pattern, str, matches[1:])
 	}
 	return matches[1]
 }
