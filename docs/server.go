@@ -10,7 +10,7 @@ func main() {
 	ctx, cancel := context.WithCancel(context.Background())
 	defer cancel()
 
-	fs := http.FileServer(http.Dir("html"))
+	fs := http.FileServer(http.Dir("docs"))
 	http.Handle("/", fs)
 
 	go func() {
