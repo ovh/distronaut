@@ -1,14 +1,39 @@
+- name: Alpine
+  url: https://dl-cdn.alpinelinux.org/alpine/:version/releases/:arch/:iso
+  patterns:
+    :version: ^v(\d+\.\d+)\/$
+    :arch: ^(\w+)\/$
+    :iso: ^alpine-standard-[0-9.]+-\k<arch>\.iso$
+    .hash.file: \k<iso>.sha256
+    .hash.algo: sha256
+    .hash.pattern: ^([0-9a-f]{64})\s+\k<iso>
+    .meta.source: distrowatch
+    .meta.id: alpine
+    .meta.version: (\d+\.\d+)
+
 - name: Debian
-  url: https://cdimage.debian.org/debian-cd/:version/:arch/iso-cd/:iso
+  url: https://cdimage.debian.org/cdimage/archive/:version/:arch/iso-cd/:iso
   patterns:
     :version: ^(\d+\.\d+(?:\.\d+)?)\/$
-    :arch: ^(amd64|arm64)\/$
-    :iso: ^debian-\k<version>-\k<arch>-netinst\.iso$
+    :arch: ^(amd64)\/$
+    :iso: ^debian-[0-9.]+-\k<arch>-netinst\.iso$
     .hash.file: SHA256SUMS
     .hash.algo: sha256
     .hash.pattern: (?m)^([0-9a-f]{64})\s+\k<iso>
     .meta.source: distrowatch
     .meta.id: debian
+    .meta.version: (\d+)
+
+- name: Mint (cinnamon)
+  url: https://mirrors.edge.kernel.org/linuxmint/stable/:version/:iso
+  patterns:
+    :version: ^(\d+(?:\.\d+))\/$
+    :iso: ^.*cinnamon-.*\.iso$
+    .hash.file: sha256sum.txt
+    .hash.algo: sha256
+    .hash.pattern: (?m)^([0-9a-f]{64})\s+.*cinnamon-.*\.iso
+    .meta.source: distrowatch
+    .meta.id: mint
     .meta.version: (\d+)
 
 - name: Ubuntu
@@ -64,14 +89,13 @@
     .meta.id: fedora
     .meta.version: (\d+)
 
-- name: Mint (cinnamon)
-  url: https://mirrors.edge.kernel.org/linuxmint/stable/:version/:iso
+- name: ArchLinux (latest)
+  url: http://archlinux.mirrors.ovh.net/archlinux/iso/latest/:iso # Leave http
   patterns:
-    :version: ^(\d+(?:\.\d+))\/$
-    :iso: ^.*cinnamon-.*\.iso$
-    .hash.file: sha256sum.txt
+    :iso: ^archlinux-[0-9.]+-x86_64.iso$
+    .hash.file: sha256sums.txt
     .hash.algo: sha256
-    .hash.pattern: (?m)^([0-9a-f]{64})\s+.*cinnamon-.*\.iso
+    .hash.pattern: (?m)^([0-9a-f]{64})\s+\k<iso>
     .meta.source: distrowatch
-    .meta.id: mint
+    .meta.id: arch
     .meta.version: (\d+)
