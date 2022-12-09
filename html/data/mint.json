@@ -1,0 +1,343 @@
+[
+  {
+    "source": "Mint (cinnamon)",
+    "family": "Linux",
+    "distribution": "Linux Mint",
+    "website": "https://linuxmint.com/",
+    "documentation": "https://community.linuxmint.com/ •",
+    "status": "Active",
+    "logo": "images/ktyxqzobhgijab/mint-small.png",
+    "versions": [
+      {
+        "url": "https://mirrors.edge.kernel.org/linuxmint/stable/17.1/linuxmint-17.1-cinnamon-32bit.iso",
+        "hash": "sha256:343ada48a24bed0243cf325ef86b11317924bd0339fe6e5efd2ee02b363e9ec0",
+        "version": "17.1",
+        "arch": "32bit",
+        "meta": {
+          "eol": "2019-04",
+          "release": "2015-12-04"
+        }
+      },
+      {
+        "url": "https://mirrors.edge.kernel.org/linuxmint/stable/17.1/linuxmint-17.1-cinnamon-64bit.iso",
+        "hash": "sha256:343ada48a24bed0243cf325ef86b11317924bd0339fe6e5efd2ee02b363e9ec0",
+        "version": "17.1",
+        "arch": "64bit",
+        "meta": {
+          "eol": "2019-04",
+          "release": "2015-12-04"
+        }
+      },
+      {
+        "url": "https://mirrors.edge.kernel.org/linuxmint/stable/17.1/linuxmint-17.1-cinnamon-nocodecs-32bit.iso",
+        "hash": "sha256:343ada48a24bed0243cf325ef86b11317924bd0339fe6e5efd2ee02b363e9ec0",
+        "version": "17.1",
+        "arch": "32bit",
+        "meta": {
+          "eol": "2019-04",
+          "release": "2015-12-04"
+        }
+      },
+      {
+        "url": "https://mirrors.edge.kernel.org/linuxmint/stable/17.1/linuxmint-17.1-cinnamon-nocodecs-64bit.iso",
+        "hash": "sha256:343ada48a24bed0243cf325ef86b11317924bd0339fe6e5efd2ee02b363e9ec0",
+        "version": "17.1",
+        "arch": "64bit",
+        "meta": {
+          "eol": "2019-04",
+          "release": "2015-12-04"
+        }
+      },
+      {
+        "url": "https://mirrors.edge.kernel.org/linuxmint/stable/17.1/linuxmint-17.1-cinnamon-oem-64bit.iso",
+        "hash": "sha256:343ada48a24bed0243cf325ef86b11317924bd0339fe6e5efd2ee02b363e9ec0",
+        "version": "17.1",
+        "arch": "64bit",
+        "meta": {
+          "eol": "2019-04",
+          "release": "2015-12-04"
+        }
+      },
+      {
+        "url": "https://mirrors.edge.kernel.org/linuxmint/stable/17.2/linuxmint-17.2-cinnamon-32bit.iso",
+        "hash": "sha256:34450f122abadea6506473d366a4ff94e64076cd1d2a4e3e2ec50e63a88d53ca",
+        "version": "17.2",
+        "arch": "32bit",
+        "meta": {
+          "eol": "2019-04",
+          "release": "2015-12-04"
+        }
+      },
+      {
+        "url": "https://mirrors.edge.kernel.org/linuxmint/stable/17.2/linuxmint-17.2-cinnamon-64bit.iso",
+        "hash": "sha256:34450f122abadea6506473d366a4ff94e64076cd1d2a4e3e2ec50e63a88d53ca",
+        "version": "17.2",
+        "arch": "64bit",
+        "meta": {
+          "eol": "2019-04",
+          "release": "2015-12-04"
+        }
+      },
+      {
+        "url": "https://mirrors.edge.kernel.org/linuxmint/stable/17.2/linuxmint-17.2-cinnamon-nocodecs-32bit.iso",
+        "hash": "sha256:34450f122abadea6506473d366a4ff94e64076cd1d2a4e3e2ec50e63a88d53ca",
+        "version": "17.2",
+        "arch": "32bit",
+        "meta": {
+          "eol": "2019-04",
+          "release": "2015-12-04"
+        }
+      },
+      {
+        "url": "https://mirrors.edge.kernel.org/linuxmint/stable/17.2/linuxmint-17.2-cinnamon-nocodecs-64bit.iso",
+        "hash": "sha256:34450f122abadea6506473d366a4ff94e64076cd1d2a4e3e2ec50e63a88d53ca",
+        "version": "17.2",
+        "arch": "64bit",
+        "meta": {
+          "eol": "2019-04",
+          "release": "2015-12-04"
+        }
+      },
+      {
+        "url": "https://mirrors.edge.kernel.org/linuxmint/stable/17.2/linuxmint-17.2-cinnamon-oem-64bit.iso",
+        "hash": "sha256:34450f122abadea6506473d366a4ff94e64076cd1d2a4e3e2ec50e63a88d53ca",
+        "version": "17.2",
+        "arch": "64bit",
+        "meta": {
+          "eol": "2019-04",
+          "release": "2015-12-04"
+        }
+      },
+      {
+        "url": "https://mirrors.edge.kernel.org/linuxmint/stable/17.3/linuxmint-17.3-cinnamon-32bit.iso",
+        "hash": "sha256:46b8a14826a53f4cacf56d1132a5184c2132f274aef8103e5e8e8cae9e1cfde0",
+        "version": "17.3",
+        "arch": "32bit",
+        "meta": {
+          "eol": "2019-04",
+          "release": "2015-12-04"
+        }
+      },
+      {
+        "url": "https://mirrors.edge.kernel.org/linuxmint/stable/17.3/linuxmint-17.3-cinnamon-64bit.iso",
+        "hash": "sha256:46b8a14826a53f4cacf56d1132a5184c2132f274aef8103e5e8e8cae9e1cfde0",
+        "version": "17.3",
+        "arch": "64bit",
+        "meta": {
+          "eol": "2019-04",
+          "release": "2015-12-04"
+        }
+      },
+      {
+        "url": "https://mirrors.edge.kernel.org/linuxmint/stable/17.3/linuxmint-17.3-cinnamon-nocodecs-32bit.iso",
+        "hash": "sha256:46b8a14826a53f4cacf56d1132a5184c2132f274aef8103e5e8e8cae9e1cfde0",
+        "version": "17.3",
+        "arch": "32bit",
+        "meta": {
+          "eol": "2019-04",
+          "release": "2015-12-04"
+        }
+      },
+      {
+        "url": "https://mirrors.edge.kernel.org/linuxmint/stable/17.3/linuxmint-17.3-cinnamon-nocodecs-64bit.iso",
+        "hash": "sha256:46b8a14826a53f4cacf56d1132a5184c2132f274aef8103e5e8e8cae9e1cfde0",
+        "version": "17.3",
+        "arch": "64bit",
+        "meta": {
+          "eol": "2019-04",
+          "release": "2015-12-04"
+        }
+      },
+      {
+        "url": "https://mirrors.edge.kernel.org/linuxmint/stable/17.3/linuxmint-17.3-cinnamon-oem-64bit.iso",
+        "hash": "sha256:46b8a14826a53f4cacf56d1132a5184c2132f274aef8103e5e8e8cae9e1cfde0",
+        "version": "17.3",
+        "arch": "64bit",
+        "meta": {
+          "eol": "2019-04",
+          "release": "2015-12-04"
+        }
+      },
+      {
+        "url": "https://mirrors.edge.kernel.org/linuxmint/stable/18.1/linuxmint-18.1-cinnamon-32bit.iso",
+        "hash": "sha256:469b346800c71a60bd7204e03d4cc909c2dc1099f6fc1eaade320411f0fd2990",
+        "version": "18.1",
+        "arch": "32bit",
+        "meta": {
+          "eol": "2021-04",
+          "release": "2017-11-27"
+        }
+      },
+      {
+        "url": "https://mirrors.edge.kernel.org/linuxmint/stable/18.1/linuxmint-18.1-cinnamon-64bit.iso",
+        "hash": "sha256:469b346800c71a60bd7204e03d4cc909c2dc1099f6fc1eaade320411f0fd2990",
+        "version": "18.1",
+        "arch": "64bit",
+        "meta": {
+          "eol": "2021-04",
+          "release": "2017-11-27"
+        }
+      },
+      {
+        "url": "https://mirrors.edge.kernel.org/linuxmint/stable/18.2/linuxmint-18.2-cinnamon-32bit.iso",
+        "hash": "sha256:c8c92c131a8be74ae45bce61f002633cd2755ca7318a337dca8a14ff1c8e16a0",
+        "version": "18.2",
+        "arch": "32bit",
+        "meta": {
+          "eol": "2021-04",
+          "release": "2017-11-27"
+        }
+      },
+      {
+        "url": "https://mirrors.edge.kernel.org/linuxmint/stable/18.2/linuxmint-18.2-cinnamon-64bit.iso",
+        "hash": "sha256:c8c92c131a8be74ae45bce61f002633cd2755ca7318a337dca8a14ff1c8e16a0",
+        "version": "18.2",
+        "arch": "64bit",
+        "meta": {
+          "eol": "2021-04",
+          "release": "2017-11-27"
+        }
+      },
+      {
+        "url": "https://mirrors.edge.kernel.org/linuxmint/stable/18.3/linuxmint-18.3-cinnamon-32bit.iso",
+        "hash": "sha256:2026b8901f86f4711e2aaa35f5515407eebb7fb2c3cdd0359ffb6f6d0a368b9d",
+        "version": "18.3",
+        "arch": "32bit",
+        "meta": {
+          "eol": "2021-04",
+          "release": "2017-11-27"
+        }
+      },
+      {
+        "url": "https://mirrors.edge.kernel.org/linuxmint/stable/18.3/linuxmint-18.3-cinnamon-64bit.iso",
+        "hash": "sha256:2026b8901f86f4711e2aaa35f5515407eebb7fb2c3cdd0359ffb6f6d0a368b9d",
+        "version": "18.3",
+        "arch": "64bit",
+        "meta": {
+          "eol": "2021-04",
+          "release": "2017-11-27"
+        }
+      },
+      {
+        "url": "https://mirrors.edge.kernel.org/linuxmint/stable/19.1/linuxmint-19.1-cinnamon-32bit.iso",
+        "hash": "sha256:b580052c4652ac8f1cbcd9057a0395642a722707d17e1a77844ff7fb4db36b70",
+        "version": "19.1",
+        "arch": "32bit",
+        "meta": {
+          "eol": "2023-04",
+          "release": "2019-12-18"
+        }
+      },
+      {
+        "url": "https://mirrors.edge.kernel.org/linuxmint/stable/19.1/linuxmint-19.1-cinnamon-64bit.iso",
+        "hash": "sha256:b580052c4652ac8f1cbcd9057a0395642a722707d17e1a77844ff7fb4db36b70",
+        "version": "19.1",
+        "arch": "64bit",
+        "meta": {
+          "eol": "2023-04",
+          "release": "2019-12-18"
+        }
+      },
+      {
+        "url": "https://mirrors.edge.kernel.org/linuxmint/stable/19.2/linuxmint-19.2-cinnamon-32bit.iso",
+        "hash": "sha256:3d2748bf6d302cccf19aaaf7d8051953d120388e07356ca76b68dcb1e54f37f1",
+        "version": "19.2",
+        "arch": "32bit",
+        "meta": {
+          "eol": "2023-04",
+          "release": "2019-12-18"
+        }
+      },
+      {
+        "url": "https://mirrors.edge.kernel.org/linuxmint/stable/19.2/linuxmint-19.2-cinnamon-64bit.iso",
+        "hash": "sha256:3d2748bf6d302cccf19aaaf7d8051953d120388e07356ca76b68dcb1e54f37f1",
+        "version": "19.2",
+        "arch": "64bit",
+        "meta": {
+          "eol": "2023-04",
+          "release": "2019-12-18"
+        }
+      },
+      {
+        "url": "https://mirrors.edge.kernel.org/linuxmint/stable/19.3/linuxmint-19.3-cinnamon-32bit.iso",
+        "hash": "sha256:f1e0469b220b318151bf5c9515380705ddc5d4f59dd0f1af6e78fea599f05e4a",
+        "version": "19.3",
+        "arch": "32bit",
+        "meta": {
+          "eol": "2023-04",
+          "release": "2019-12-18"
+        }
+      },
+      {
+        "url": "https://mirrors.edge.kernel.org/linuxmint/stable/19.3/linuxmint-19.3-cinnamon-64bit.iso",
+        "hash": "sha256:f1e0469b220b318151bf5c9515380705ddc5d4f59dd0f1af6e78fea599f05e4a",
+        "version": "19.3",
+        "arch": "64bit",
+        "meta": {
+          "eol": "2023-04",
+          "release": "2019-12-18"
+        }
+      },
+      {
+        "url": "https://mirrors.edge.kernel.org/linuxmint/stable/20.1/linuxmint-20.1-cinnamon-64bit-edge.iso",
+        "hash": "sha256:966fead51235cb4f0cd023506d538df1eeecedf1b06971e12eac4b92c862fa2b",
+        "version": "20.1",
+        "arch": "64bit",
+        "meta": {
+          "eol": "",
+          "release": "2022-01-06"
+        }
+      },
+      {
+        "url": "https://mirrors.edge.kernel.org/linuxmint/stable/20.1/linuxmint-20.1-cinnamon-64bit.iso",
+        "hash": "sha256:966fead51235cb4f0cd023506d538df1eeecedf1b06971e12eac4b92c862fa2b",
+        "version": "20.1",
+        "arch": "64bit",
+        "meta": {
+          "eol": "",
+          "release": "2022-01-06"
+        }
+      },
+      {
+        "url": "https://mirrors.edge.kernel.org/linuxmint/stable/20.2/linuxmint-20.2-cinnamon-64bit-edge.iso",
+        "hash": "sha256:034a6eb5e023526014d1b3d86e41ba19bc902a45060862353e7fe3311a8208a0",
+        "version": "20.2",
+        "arch": "64bit",
+        "meta": {
+          "eol": "",
+          "release": "2022-01-06"
+        }
+      },
+      {
+        "url": "https://mirrors.edge.kernel.org/linuxmint/stable/20.2/linuxmint-20.2-cinnamon-64bit.iso",
+        "hash": "sha256:034a6eb5e023526014d1b3d86e41ba19bc902a45060862353e7fe3311a8208a0",
+        "version": "20.2",
+        "arch": "64bit",
+        "meta": {
+          "eol": "",
+          "release": "2022-01-06"
+        }
+      },
+      {
+        "url": "https://mirrors.edge.kernel.org/linuxmint/stable/20.3/linuxmint-20.3-cinnamon-64bit-edge.iso",
+        "hash": "sha256:b6b4bbfafdacf9e00f4c674ba237193b40347140917946cff0ede3b10dc6ea55",
+        "version": "20.3",
+        "arch": "64bit",
+        "meta": {
+          "eol": "",
+          "release": "2022-01-06"
+        }
+      },
+      {
+        "url": "https://mirrors.edge.kernel.org/linuxmint/stable/20.3/linuxmint-20.3-cinnamon-64bit.iso",
+        "hash": "sha256:b6b4bbfafdacf9e00f4c674ba237193b40347140917946cff0ede3b10dc6ea55",
+        "version": "20.3",
+        "arch": "64bit",
+        "meta": {
+          "eol": "",
+          "release": "2022-01-06"
+        }
+      }
+    ]
+  }
+]

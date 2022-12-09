@@ -1,0 +1,20 @@
+[
+  {
+    "source": "ArchLinux (latest)",
+    "family": "Linux",
+    "distribution": "Arch Linux",
+    "website": "http://www.archlinux.org/",
+    "documentation": "http://wiki.archlinux.org/",
+    "status": "Active",
+    "logo": "images/ktyxqzobhgijab/arch-small.png",
+    "versions": [
+      {
+        "url": "http://archlinux.mirrors.ovh.net/archlinux/iso/latest/archlinux-2022.12.01-x86_64.iso",
+        "hash": "sha256:de301b9f18973e5902b47bb00380732af38d8ca70084b573ae7cf36a818eb84c",
+        "version": "2022.12.01",
+        "arch": "x86_64",
+        "meta": {}
+      }
+    ]
+  }
+]

@@ -1,0 +1,116 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>🚀 Distronaut</title>
+        <link rel="stylesheet" href="/css/styles.css">
+    </head>
+    <body>
+        <header>
+            <div class="title">🚀 Distronaut</div>
+            <div class="description">Find distribution installers all across the web !</div>
+        </header>
+        <main>
+            <template v-if="true">
+                <section class="warning">
+                    Distronaut portal is still experimental and you may encounter bugs or missing features. 
+                    Please report any issues at <a href="github.com/ovh/distronaut/issues">github.com/ovh/distronaut</a>
+                </section>
+                <section class="search">
+                    <template v-if="selected">
+                        <div class="control" @click="selected = null">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="16" height="16"><path fill-rule="evenodd" d="M9.78 12.78a.75.75 0 01-1.06 0L4.47 8.53a.75.75 0 010-1.06l4.25-4.25a.75.75 0 011.06 1.06L6.06 8l3.72 3.72a.75.75 0 010 1.06z"></path></svg>
+                            Look for another distribution
+                        </div>
+                        <div>
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path fill-rule="evenodd" d="M10.25 2a8.25 8.25 0 105.28 14.59l5.69 5.69a.75.75 0 101.06-1.06l-5.69-5.69A8.25 8.25 0 0010.25 2zM3.5 10.25a6.75 6.75 0 1113.5 0 6.75 6.75 0 01-13.5 0z"></path></svg>
+                            Search for a <span class="selected">{{ selected.distribution }}</span> installer:
+                        </div>
+                        <input type="text" v-model="search" placeholder="">
+                        <div class="results">
+                            Found {{ versions.length }} version{{ versions.length === 1 ? '' : 's' }}
+                        </div>
+                    </template>
+                    <template v-else>
+                        <div>
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path fill-rule="evenodd" d="M10.25 2a8.25 8.25 0 105.28 14.59l5.69 5.69a.75.75 0 101.06-1.06l-5.69-5.69A8.25 8.25 0 0010.25 2zM3.5 10.25a6.75 6.75 0 1113.5 0 6.75 6.75 0 01-13.5 0z"></path></svg>
+                            Search for a distribution:
+                        </div>
+                        <input type="text" v-model="search" placeholder="">
+                        <div class="results">
+                            Found {{ distributions.length }} distribution{{ distributions.length === 1 ? '' : 's' }}
+                        </div>
+                    </template>
+                </section>
+                <div class="tiles" v-if="!selected">
+                    <transition-group name="fade">
+                        <div class="tile" v-for="distro in distributions" @click="selected = distro" :key="`${distro.source}-${distro.distribution}`">
+                            <div>
+                                <img v-if="false" :src="`${distro.logo}`" alt="">
+                                <div class="title">
+                                    <span>{{ distro.distribution }}</span>
+                                    <div class="label-success">
+                                        {{ distro.status }}
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="data" v-if="distro.family">
+                                <div>Family</div>
+                                <div>{{ distro.family }}</div>
+                            </div>
+                            <div class="data" v-if="distro.website">
+                                <div>Website</div>
+                                <div><a :href="distro.website">{{ format("url", distro.website) }}</a></div>
+                            </div>
+                            <div class="data" v-if="distro.documentation">
+                                <div>Documentation</div>
+                                <div><a :href="distro.documentation">{{ format("url", distro.documentation) }}</a></div>
+                            </div>
+                            <div class="data" v-if="distro.source">
+                                <div>Distronaut source name</div>
+                                <div>{{ distro.source }}</div>
+                            </div>
+                            <div class="data" v-if="distro.versions">
+                                <div>Available versions</div>
+                                <div>{{ distro.versions.length }}</div>
+                            </div>
+                        </div>
+                    </transition-group>
+                </div>
+                <div class="links" v-if="versions">
+                    <transition-group name="fade">
+                        <div class="link" v-for="(version, id) in versions" :key="version.url">
+                            <div class="name">
+                                {{ format("basename", version.url) }}
+                            </div>
+                            <div class="url">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="16" height="16"><path fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path></svg>
+                                <a :href="version.url">{{ format("url", version.url) }}</a>
+                            </div>
+                            <div class="hash">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="16" height="16"><path fill-rule="evenodd" d="M4 1.75C4 .784 4.784 0 5.75 0h5.586c.464 0 .909.184 1.237.513l2.914 2.914c.329.328.513.773.513 1.237v8.586A1.75 1.75 0 0114.25 15h-9a.75.75 0 010-1.5h9a.25.25 0 00.25-.25V6h-2.75A1.75 1.75 0 0110 4.25V1.5H5.75a.25.25 0 00-.25.25v2a.75.75 0 01-1.5 0v-2zm7.5-.188V4.25c0 .138.112.25.25.25h2.688a.252.252 0 00-.011-.013l-2.914-2.914a.272.272 0 00-.013-.011zM0 7.75C0 6.784.784 6 1.75 6h1.5C4.216 6 5 6.784 5 7.75v2.5A1.75 1.75 0 013.25 12h-1.5A1.75 1.75 0 010 10.25v-2.5zm1.75-.25a.25.25 0 00-.25.25v2.5c0 .138.112.25.25.25h1.5a.25.25 0 00.25-.25v-2.5a.25.25 0 00-.25-.25h-1.5zm5-1.5a.75.75 0 000 1.5h.75v3h-.75a.75.75 0 000 1.5h3a.75.75 0 000-1.5H9V6.75A.75.75 0 008.25 6h-1.5z"></path></svg>
+                                {{ version.hash }}
+                            </div>
+                            <div class="metadata">
+                                <div v-if="version.version">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="16" height="16"><path fill-rule="evenodd" d="M8 1.5a6.5 6.5 0 100 13 6.5 6.5 0 000-13zM0 8a8 8 0 1116 0A8 8 0 010 8zm6.5-.25A.75.75 0 017.25 7h1a.75.75 0 01.75.75v2.75h.25a.75.75 0 010 1.5h-2a.75.75 0 010-1.5h.25v-2h-.25a.75.75 0 01-.75-.75zM8 6a1 1 0 100-2 1 1 0 000 2z"></path></svg>
+                                    Version: {{ version.version }}
+                                </div>
+                                <div v-if="version.arch">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="16" height="16"><path fill-rule="evenodd" d="M6.5.75a.75.75 0 00-1.5 0V2H3.75A1.75 1.75 0 002 3.75V5H.75a.75.75 0 000 1.5H2v3H.75a.75.75 0 000 1.5H2v1.25c0 .966.784 1.75 1.75 1.75H5v1.25a.75.75 0 001.5 0V14h3v1.25a.75.75 0 001.5 0V14h1.25A1.75 1.75 0 0014 12.25V11h1.25a.75.75 0 000-1.5H14v-3h1.25a.75.75 0 000-1.5H14V3.75A1.75 1.75 0 0012.25 2H11V.75a.75.75 0 00-1.5 0V2h-3V.75zm5.75 11.75h-8.5a.25.25 0 01-.25-.25v-8.5a.25.25 0 01.25-.25h8.5a.25.25 0 01.25.25v8.5a.25.25 0 01-.25.25zM5.75 5a.75.75 0 00-.75.75v4.5c0 .414.336.75.75.75h4.5a.75.75 0 00.75-.75v-4.5a.75.75 0 00-.75-.75h-4.5zm.75 4.5v-3h3v3h-3z"></path></svg>
+                                    Arch: {{ version.arch }}
+                                </div>
+                                <div v-if="version.meta.release">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="16" height="16"><path fill-rule="evenodd" d="M4.75 0a.75.75 0 01.75.75V2h5V.75a.75.75 0 011.5 0V2h1.25c.966 0 1.75.784 1.75 1.75v10.5A1.75 1.75 0 0113.25 16H2.75A1.75 1.75 0 011 14.25V3.75C1 2.784 1.784 2 2.75 2H4V.75A.75.75 0 014.75 0zm0 3.5h8.5a.25.25 0 01.25.25V6h-11V3.75a.25.25 0 01.25-.25h2zm-2.25 4v6.75c0 .138.112.25.25.25h10.5a.25.25 0 00.25-.25V7.5h-11z"></path></svg>
+                                    Released: {{ version.meta.release }}
+                                </div>
+                            </div>
+                        </div>
+                    </transition-group>
+                </div>
+            </template>
+        </main>
+        <script src="https://unpkg.com/vue@3/dist/vue.global.prod.js"></script>
+        <script src="/js/app.js"></script>
+    </body>
+</html>

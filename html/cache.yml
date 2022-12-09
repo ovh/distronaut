@@ -1,0 +1,34 @@
+
+
+
+
+
+
+
+- name: Ubuntu (Server 20+)
+  url: https://releases.ubuntu.com/:version/:iso
+  patterns:
+    :version: ^(2\d+\.\d+(?:\.\d+)?)\/$ # Version > 20.00
+    :iso: ^ubuntu-.*-server-amd64.*\.iso$
+    .hash.file: SHA256SUMS
+    .hash.algo: sha256
+    .hash.pattern: (?m)^([0-9a-f]{64})\s+.*server-amd64.*\.iso
+
+- name: Opensuse (Leap)
+  url: https://mirror.us.leaseweb.net/opensuse/distribution/leap/:version/iso/:iso
+  patterns:
+    :version: ^(\d+\.\d+(?:\.\d+)?)\/$
+    :iso: ^openSUSE-Leap-[0-9.]+-DVD-x86_64-Media\.iso$
+    .hash.file: \k<iso>.sha256
+    .hash.algo: sha256
+    .hash.pattern: (?m)^([0-9a-f]{64})\s+\k<iso>
+
+
+
+
+
+
+
+
+
+

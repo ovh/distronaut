@@ -1,0 +1,247 @@
+[
+  {
+    "source": "OpenSUSE",
+    "family": "Linux",
+    "distribution": "openSUSE (formerly SUSE Linux)",
+    "website": "http://www.opensuse.org/",
+    "documentation": "http://en.opensuse.org/Portal:Documentation •",
+    "status": "Active",
+    "logo": "images/ktyxqzobhgijab/opensuse-small.png",
+    "versions": [
+      {
+        "url": "https://download.opensuse.org/distribution/jump/15.2/iso/openSUSE-Jump-15.2-DVD-x86_64-Current.iso",
+        "hash": "sha256:b8b4f6eb10fe152388b52e095f67090b20a0ca71f637f9c2e3b739a4b976818f",
+        "version": "15.2",
+        "arch": "x86_64",
+        "meta": {}
+      },
+      {
+        "url": "https://download.opensuse.org/distribution/jump/15.2/iso/openSUSE-Jump-15.2-NET-x86_64-Current.iso",
+        "hash": "sha256:becec20176fcae68516cc0730a756ff500ae22495e7954976495487058117a98",
+        "version": "15.2",
+        "arch": "x86_64",
+        "meta": {}
+      },
+      {
+        "url": "https://download.opensuse.org/distribution/leap/15.0/iso/openSUSE-Leap-15.0-DVD-x86_64-Current.iso",
+        "hash": "sha256:c477428c7830ca76762d2f78603e13067c33952b936ff100189523e1fabe5a77",
+        "version": "15.0",
+        "arch": "x86_64",
+        "meta": {}
+      },
+      {
+        "url": "https://download.opensuse.org/distribution/leap/15.0/iso/openSUSE-Leap-15.0-NET-x86_64-Current.iso",
+        "hash": "sha256:1a322de7c215da96fdbad4c247d218eb79073c5620a332a759c0291b44746fbc",
+        "version": "15.0",
+        "arch": "x86_64",
+        "meta": {}
+      },
+      {
+        "url": "https://download.opensuse.org/distribution/leap/15.2/iso/openSUSE-Leap-15.2-DVD-x86_64-Current.iso",
+        "hash": "",
+        "version": "15.2",
+        "arch": "x86_64",
+        "meta": {}
+      },
+      {
+        "url": "https://download.opensuse.org/distribution/leap/15.2/iso/openSUSE-Leap-15.2-NET-x86_64-Current.iso",
+        "hash": "",
+        "version": "15.2",
+        "arch": "x86_64",
+        "meta": {}
+      },
+      {
+        "url": "https://download.opensuse.org/distribution/leap/15.3/iso/openSUSE-Leap-15.3-DVD-aarch64-Current.iso",
+        "hash": "",
+        "version": "15.3",
+        "arch": "",
+        "meta": {}
+      },
+      {
+        "url": "https://download.opensuse.org/distribution/leap/15.3/iso/openSUSE-Leap-15.3-DVD-ppc64le-Current.iso",
+        "hash": "",
+        "version": "15.3",
+        "arch": "ppc64",
+        "meta": {}
+      },
+      {
+        "url": "https://download.opensuse.org/distribution/leap/15.3/iso/openSUSE-Leap-15.3-DVD-s390x-Current.iso",
+        "hash": "",
+        "version": "15.3",
+        "arch": "s390x",
+        "meta": {}
+      },
+      {
+        "url": "https://download.opensuse.org/distribution/leap/15.3/iso/openSUSE-Leap-15.3-DVD-x86_64-Current.iso",
+        "hash": "",
+        "version": "15.3",
+        "arch": "x86_64",
+        "meta": {}
+      },
+      {
+        "url": "https://download.opensuse.org/distribution/leap/15.3/iso/openSUSE-Leap-15.3-NET-aarch64-Current.iso",
+        "hash": "",
+        "version": "15.3",
+        "arch": "",
+        "meta": {}
+      },
+      {
+        "url": "https://download.opensuse.org/distribution/leap/15.3/iso/openSUSE-Leap-15.3-NET-ppc64le-Current.iso",
+        "hash": "",
+        "version": "15.3",
+        "arch": "ppc64",
+        "meta": {}
+      },
+      {
+        "url": "https://download.opensuse.org/distribution/leap/15.3/iso/openSUSE-Leap-15.3-NET-s390x-Current.iso",
+        "hash": "",
+        "version": "15.3",
+        "arch": "s390x",
+        "meta": {}
+      },
+      {
+        "url": "https://download.opensuse.org/distribution/leap/15.3/iso/openSUSE-Leap-15.3-NET-x86_64-Current.iso",
+        "hash": "",
+        "version": "15.3",
+        "arch": "x86_64",
+        "meta": {}
+      },
+      {
+        "url": "https://download.opensuse.org/distribution/leap/15.4/iso/openSUSE-Leap-15.4-DVD-aarch64-Current.iso",
+        "hash": "sha256:d87f79b2b723f9baaeedd9e2be0365c04081e51a4f7f7f08c7ab3eee0c3e0fae",
+        "version": "15.4",
+        "arch": "",
+        "meta": {
+          "eol": "",
+          "release": "2022-06-08"
+        }
+      },
+      {
+        "url": "https://download.opensuse.org/distribution/leap/15.4/iso/openSUSE-Leap-15.4-DVD-ppc64le-Current.iso",
+        "hash": "sha256:4c84e6ea234ca993e901bfd1b4196804ad4b9a7ef8ba040ac3be073fadf77e3c",
+        "version": "15.4",
+        "arch": "ppc64",
+        "meta": {
+          "eol": "",
+          "release": "2022-06-08"
+        }
+      },
+      {
+        "url": "https://download.opensuse.org/distribution/leap/15.4/iso/openSUSE-Leap-15.4-DVD-s390x-Current.iso",
+        "hash": "sha256:ae53005e6fb562a0081fa100d13b8a40e19aa76ded905aa42174a7ea1eac8e0e",
+        "version": "15.4",
+        "arch": "s390x",
+        "meta": {
+          "eol": "",
+          "release": "2022-06-08"
+        }
+      },
+      {
+        "url": "https://download.opensuse.org/distribution/leap/15.4/iso/openSUSE-Leap-15.4-DVD-x86_64-Current.iso",
+        "hash": "sha256:4683345f242397c7fd7d89a50731a120ffd60a24460e21d2634e783b3c169695",
+        "version": "15.4",
+        "arch": "x86_64",
+        "meta": {
+          "eol": "",
+          "release": "2022-06-08"
+        }
+      },
+      {
+        "url": "https://download.opensuse.org/distribution/leap/15.4/iso/openSUSE-Leap-15.4-NET-aarch64-Current.iso",
+        "hash": "sha256:cf6ecba1061345803334a3fe9bdfe3dd8be5726c62b2d63461fe9af6580bf6a5",
+        "version": "15.4",
+        "arch": "",
+        "meta": {
+          "eol": "",
+          "release": "2022-06-08"
+        }
+      },
+      {
+        "url": "https://download.opensuse.org/distribution/leap/15.4/iso/openSUSE-Leap-15.4-NET-ppc64le-Current.iso",
+        "hash": "sha256:279272c633361b3e0c6dae150e7cc18e18c8066d16e9d6b4461998475163d717",
+        "version": "15.4",
+        "arch": "ppc64",
+        "meta": {
+          "eol": "",
+          "release": "2022-06-08"
+        }
+      },
+      {
+        "url": "https://download.opensuse.org/distribution/leap/15.4/iso/openSUSE-Leap-15.4-NET-s390x-Current.iso",
+        "hash": "sha256:3b7c8bdbd71186de30c99388d4c5461e8720734bcbb26cae82416565bf46f029",
+        "version": "15.4",
+        "arch": "s390x",
+        "meta": {
+          "eol": "",
+          "release": "2022-06-08"
+        }
+      },
+      {
+        "url": "https://download.opensuse.org/distribution/leap/15.4/iso/openSUSE-Leap-15.4-NET-x86_64-Current.iso",
+        "hash": "sha256:c0a71062d0238ccba4874e2da1fb77847e99ae73cdb148933aeb411956bb35ec",
+        "version": "15.4",
+        "arch": "x86_64",
+        "meta": {
+          "eol": "",
+          "release": "2022-06-08"
+        }
+      },
+      {
+        "url": "https://download.opensuse.org/distribution/leap/15.5/iso/openSUSE-Leap-15.5-DVD-aarch64-Current.iso",
+        "hash": "sha256:4d5a382ef5dd9e126d142d566bec6020fe41ad5b4f6f94974a199919aa779669",
+        "version": "15.5",
+        "arch": "",
+        "meta": {}
+      },
+      {
+        "url": "https://download.opensuse.org/distribution/leap/15.5/iso/openSUSE-Leap-15.5-DVD-ppc64le-Current.iso",
+        "hash": "sha256:3c38a09d958823165b372e85a23a10f381602fcaea45d9b99cd9e0eb35d4c3b2",
+        "version": "15.5",
+        "arch": "ppc64",
+        "meta": {}
+      },
+      {
+        "url": "https://download.opensuse.org/distribution/leap/15.5/iso/openSUSE-Leap-15.5-DVD-s390x-Current.iso",
+        "hash": "sha256:0ea2c215909eb364487c916bb006b04198f3bdc446db247d9d7aa77f66a9fd7e",
+        "version": "15.5",
+        "arch": "s390x",
+        "meta": {}
+      },
+      {
+        "url": "https://download.opensuse.org/distribution/leap/15.5/iso/openSUSE-Leap-15.5-DVD-x86_64-Current.iso",
+        "hash": "sha256:47d57d8ce32e8620915b5a0a8ad20db5e00f9a768026141458e26ce963d91e60",
+        "version": "15.5",
+        "arch": "x86_64",
+        "meta": {}
+      },
+      {
+        "url": "https://download.opensuse.org/distribution/leap/15.5/iso/openSUSE-Leap-15.5-NET-aarch64-Current.iso",
+        "hash": "sha256:ba52047d63f0b9e54bf40fd69179700f58b5f6288eff6e8b4055d74d4446971e",
+        "version": "15.5",
+        "arch": "",
+        "meta": {}
+      },
+      {
+        "url": "https://download.opensuse.org/distribution/leap/15.5/iso/openSUSE-Leap-15.5-NET-ppc64le-Current.iso",
+        "hash": "sha256:6a34a77b6567d5225168904fa29c53209b29e3ec9b9bb5a783bd1664eb604aa8",
+        "version": "15.5",
+        "arch": "ppc64",
+        "meta": {}
+      },
+      {
+        "url": "https://download.opensuse.org/distribution/leap/15.5/iso/openSUSE-Leap-15.5-NET-s390x-Current.iso",
+        "hash": "sha256:ae66eaece3210d81c5f8fc462a876828897f01c390c3540ed4ed48163e092b08",
+        "version": "15.5",
+        "arch": "s390x",
+        "meta": {}
+      },
+      {
+        "url": "https://download.opensuse.org/distribution/leap/15.5/iso/openSUSE-Leap-15.5-NET-x86_64-Current.iso",
+        "hash": "sha256:3b07c4836a5f88d350a300ff7d4f7534931851ba144522c5493c540908709651",
+        "version": "15.5",
+        "arch": "x86_64",
+        "meta": {}
+      }
+    ]
+  }
+]
