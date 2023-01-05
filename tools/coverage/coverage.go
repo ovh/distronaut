@@ -13,6 +13,10 @@ import (
 )
 
 func main() {
+	if os.Getenv("CI") != "" {
+		color.NoColor = false
+	}
+
 	var path string
 	var file string
 	var threshold float64
