@@ -1,10 +1,13 @@
 package distrowatch
 
 import (
+	"encoding/base64"
 	"fmt"
 	"github.com/antchfx/htmlquery"
 	"github.com/antchfx/xpath"
 	log "github.com/sirupsen/logrus"
+	"io"
+	"net/http"
 	"strings"
 )
 
@@ -51,13 +54,27 @@ func About(id string) map[string]string {
 	n = htmlquery.FindOne(doc, `//th[text() = 'Documentation']/../td`)
 	if n != nil {
 		lines := strings.Split(strings.TrimSpace(htmlquery.InnerText(n)), "\n")
-		meta["documentation"] = strings.TrimSpace(lines[0])
+		links := strings.Split(lines[0], "•")
+		meta["documentation"] = strings.TrimSpace(links[0])
 	}
 
 	//Logo
-	n = htmlquery.FindOne(doc, `//*[@class = 'TablesTitle']//img`)
+	n = htmlquery.FindOne(doc, `//*[@class = 'TablesTitle']//img[@hspace = '32']`)
 	if n != nil {
-		meta["logo"] = htmlquery.SelectAttr(n, "src")
+		meta["logo"] = fmt.Sprintf("https://distrowatch.com/%s", htmlquery.SelectAttr(n, "src"))
+	}
+
+	//Logo base64
+	if meta["logo"] != "" {
+		res, err := http.Get(meta["logo"])
+		if res.StatusCode == 200 && err == nil {
+			defer res.Body.Close()
+			body, err := io.ReadAll(res.Body)
+			if err == nil {
+				b64 := base64.StdEncoding.EncodeToString(body)
+				meta["logo64"] = fmt.Sprintf("data:image/png;base64,%s", b64)
+			}
+		}
 	}
 
 	log.Debugf("about %s: %+v", id, meta)
