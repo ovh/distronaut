@@ -5,6 +5,8 @@ go 1.16
 require (
 	github.com/antchfx/htmlquery v1.2.5
 	github.com/antchfx/xpath v1.2.1
+	github.com/rivo/uniseg v0.4.4 // indirect
+	github.com/schollz/progressbar/v3 v3.13.1
 	github.com/sirupsen/logrus v1.9.0
 	github.com/spf13/cobra v1.5.0
 	github.com/stretchr/testify v1.7.0

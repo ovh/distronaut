@@ -3,6 +3,7 @@ package utils
 import (
 	"fmt"
 	"github.com/antchfx/htmlquery"
+	"github.com/schollz/progressbar/v3"
 	log "github.com/sirupsen/logrus"
 	"io"
 	"net/http"
@@ -27,7 +28,7 @@ const REG_VERSION = `(?P<version>\d+[-.]\d+(?:[-.]\d+)?)`
 const REG_ARCH = `(?P<arch>i386|amd(?:64)?|arm(?:64)?(?:el|hf)?|mips(?:64)?(?:el)?|ppc(?:64)?(?:el)?|s390x?|x86_64|(?:32|64)bits?)`
 
 // Scrap a distribution mirror
-func Scrap(uri string, pats map[string]string) ([]*Link, error) {
+func Scrap(uri string, pats map[string]string, bar *progressbar.ProgressBar) ([]*Link, error) {
 	var links []*Link
 
 	//Parse url
@@ -50,7 +51,7 @@ func Scrap(uri string, pats map[string]string) ([]*Link, error) {
 	vars := make(map[string]string)
 
 	//Scrap links and hashes
-	ls, err := scrap(hs, ps, pats, vars)
+	ls, err := scrap(hs, ps, pats, vars, bar)
 	if err != nil {
 		return links, err
 	}
@@ -70,10 +71,15 @@ func Scrap(uri string, pats map[string]string) ([]*Link, error) {
 }
 
 // Scrap a distribution mirror (recursive function)
-func scrap(curr string, ps []string, pats map[string]string, vars map[string]string) ([]string, error) {
+func scrap(curr string, ps []string, pats map[string]string, vars map[string]string, bar *progressbar.ProgressBar) ([]string, error) {
 	var links []string
 	var err error
 	for i, p := range ps {
+
+		//Update progress bar
+		if bar != nil {
+			bar.Describe(fmt.Sprintf("searching: [cyan]%s[reset]", curr))
+		}
 
 		//Handle route param
 		if _, ok := pats[p]; p[:1] == ":" && ok {
@@ -110,7 +116,7 @@ func scrap(curr string, ps []string, pats map[string]string, vars map[string]str
 				}
 
 				//Resume link building
-				nexted, err := scrap(next, ps[i+1:], pats, nvars)
+				nexted, err := scrap(next, ps[i+1:], pats, nvars, bar)
 				if err != nil {
 					log.Warnf("failed to scrap link: <%s> (%s)", next, err)
 					continue

@@ -14,7 +14,13 @@ var fetchCmd = &cobra.Command{
 	Use:   "fetch",
 	Short: "Fetch available distribution links from configured sources (may take some time)",
 	Run: func(cmd *cobra.Command, args []string) {
-		src, err := distro.FetchSources(config, filter)
+		var src []*distro.Release
+		var err error
+		if progress {
+			src, err = distro.FetchSourcesWithProgress(config, filter)
+		} else {
+			src, err = distro.FetchSources(config, filter)
+		}
 		if err != nil {
 			log.Errorf("%s", err)
 			os.Exit(1)
