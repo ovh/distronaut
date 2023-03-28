@@ -1,4 +1,5 @@
 - name: Alpine
+  export: docs/data/alpine.json
   url: https://dl-cdn.alpinelinux.org/alpine/:version/releases/:arch/:iso
   patterns:
     :version: ^v(\d+\.\d+)\/$
@@ -12,6 +13,7 @@
     .meta.version: (\d+\.\d+)
 
 - name: Debian
+  export: docs/data/debian.json
   url: https://cdimage.debian.org/cdimage/archive/:version/:arch/iso-cd/:iso
   patterns:
     :version: ^(\d+\.\d+(?:\.\d+)?)\/$
@@ -25,6 +27,7 @@
     .meta.version: (\d+)
 
 - name: Mint (cinnamon)
+  export: docs/data/mint.json
   url: https://mirrors.edge.kernel.org/linuxmint/stable/:version/:iso
   patterns:
     :version: ^(\d+(?:\.\d+))\/$
@@ -37,6 +40,7 @@
     .meta.version: (\d+)
 
 - name: Ubuntu
+  export: docs/data/ubuntu.json
   url: https://releases.ubuntu.com/:version/:iso
   patterns:
     :version: ^(\d+\.\d+(?:\.\d+)?)\/$
@@ -49,6 +53,7 @@
     .meta.version: (\d+\.\d+)
 
 - name: OpenSUSE
+  export: docs/data/opensuse.json
   url: https://download.opensuse.org/distribution/:edition/:version/iso/:iso
   patterns:
     :edition: ^(leap|jump)\/$
@@ -62,6 +67,7 @@
     .meta.version: (\d+\.\d+)
 
 - name: FreeBSD
+  export: docs/data/freebsd.json
   url: https://download.freebsd.org/releases/:arch/:arch2/ISO-IMAGES/:version/:iso
   patterns:
     :arch: ^(amd64|arm64)\/$
@@ -76,6 +82,7 @@
     .meta.version: (\d+\.\d+)
 
 - name: Fedora
+  export: docs/data/fedora.json
   url: https://download.fedoraproject.org/pub/fedora/linux/releases/:version/:edition/:arch/iso/:iso
   patterns:
     :version: ^(\d+)\/$
@@ -90,6 +97,7 @@
     .meta.version: (\d+)
 
 - name: ArchLinux (latest)
+  export: docs/data/arch.json
   url: http://archlinux.mirrors.ovh.net/archlinux/iso/latest/:iso # Leave http
   patterns:
     :iso: ^archlinux-[0-9.]+-x86_64.iso$

@@ -6,7 +6,8 @@
     "website": "https://www.ubuntu.com/",
     "documentation": "https://wiki.ubuntu.com/UserDocumentation",
     "status": "Active",
-    "logo": "images/ktyxqzobhgijab/ubuntu-small.png",
+    "logo": "https://distrowatch.com/images/yvzhuwbpy/ubuntu.png",
+    "logo64": "data:image/png;base64,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",
     "versions": [
       {
         "url": "https://releases.ubuntu.com/14.04.6/ubuntu-14.04.6-server-amd64.iso",
@@ -109,9 +110,9 @@
         }
       },
       {
-        "url": "https://releases.ubuntu.com/20.04.5/ubuntu-20.04.5-live-server-amd64.iso",
-        "hash": "sha256:5035be37a7e9abbdc09f0d257f3e33416c1a0fb322ba860d42d74aa75c3468d4",
-        "version": "20.04.5",
+        "url": "https://releases.ubuntu.com/20.04.6/ubuntu-20.04.6-live-server-amd64.iso",
+        "hash": "sha256:b8f31413336b9393ad5d8ef0282717b2ab19f007df2e9ed5196c13d8f9153c8b",
+        "version": "20.04.6",
         "arch": "amd64",
         "meta": {
           "eol": "2025-04",
@@ -119,8 +120,8 @@
         }
       },
       {
-        "url": "https://releases.ubuntu.com/20.04/ubuntu-20.04.5-live-server-amd64.iso",
-        "hash": "sha256:5035be37a7e9abbdc09f0d257f3e33416c1a0fb322ba860d42d74aa75c3468d4",
+        "url": "https://releases.ubuntu.com/20.04/ubuntu-20.04.6-live-server-amd64.iso",
+        "hash": "sha256:b8f31413336b9393ad5d8ef0282717b2ab19f007df2e9ed5196c13d8f9153c8b",
         "version": "20.04",
         "arch": "amd64",
         "meta": {
@@ -129,9 +130,9 @@
         }
       },
       {
-        "url": "https://releases.ubuntu.com/22.04.1/ubuntu-22.04.1-live-server-amd64.iso",
-        "hash": "sha256:10f19c5b2b8d6db711582e0e27f5116296c34fe4b313ba45f9b201a5007056cb",
-        "version": "22.04.1",
+        "url": "https://releases.ubuntu.com/22.04.2/ubuntu-22.04.2-live-server-amd64.iso",
+        "hash": "sha256:5e38b55d57d94ff029719342357325ed3bda38fa80054f9330dc789cd2d43931",
+        "version": "22.04.2",
         "arch": "amd64",
         "meta": {
           "eol": "2027-04",
@@ -139,8 +140,8 @@
         }
       },
       {
-        "url": "https://releases.ubuntu.com/22.04/ubuntu-22.04.1-live-server-amd64.iso",
-        "hash": "sha256:10f19c5b2b8d6db711582e0e27f5116296c34fe4b313ba45f9b201a5007056cb",
+        "url": "https://releases.ubuntu.com/22.04/ubuntu-22.04.2-live-server-amd64.iso",
+        "hash": "sha256:5e38b55d57d94ff029719342357325ed3bda38fa80054f9330dc789cd2d43931",
         "version": "22.04",
         "arch": "amd64",
         "meta": {

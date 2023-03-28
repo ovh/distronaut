@@ -6,48 +6,8 @@
     "website": "https://getfedora.org/",
     "documentation": "http://docs.fedoraproject.org/",
     "status": "Active",
-    "logo": "images/ktyxqzobhgijab/fedora-small.png",
-    "versions": [
-      {
-        "url": "https://download.fedoraproject.org/pub/fedora/linux/releases/34/Workstation/x86_64/iso/Fedora-Workstation-Live-x86_64-34-1.2.iso",
-        "hash": "sha256:865c4457dd066d3074c35a8847c8dac1380667c96a4f6d74526324dba14f1b5c",
-        "version": "34-1.2",
-        "arch": "x86_64",
-        "meta": {
-          "eol": "2022-06",
-          "release": "2021-04-27"
-        }
-      },
-      {
-        "url": "https://download.fedoraproject.org/pub/fedora/linux/releases/35/Workstation/x86_64/iso/Fedora-Workstation-Live-x86_64-35-1.2.iso",
-        "hash": "sha256:85d9d0c233d560e401e2ad824aa8e6d5614e8b977dfe685396bfb2eb3ba5b253",
-        "version": "35-1.2",
-        "arch": "x86_64",
-        "meta": {
-          "eol": "",
-          "release": "2021-11-02"
-        }
-      },
-      {
-        "url": "https://download.fedoraproject.org/pub/fedora/linux/releases/36/Workstation/x86_64/iso/Fedora-Workstation-Live-x86_64-36-1.5.iso",
-        "hash": "sha256:80169891cb10c679cdc31dc035dab9aae3e874395adc5229f0fe5cfcc111cc8c",
-        "version": "36-1.5",
-        "arch": "x86_64",
-        "meta": {
-          "eol": "",
-          "release": "2022-05-10"
-        }
-      },
-      {
-        "url": "https://download.fedoraproject.org/pub/fedora/linux/releases/37/Workstation/x86_64/iso/Fedora-Workstation-Live-x86_64-37-1.7.iso",
-        "hash": "sha256:9c69005baafdba6e4ff04c1cf4779121b7fc9aacab80b4633394576da336a515",
-        "version": "37-1.7",
-        "arch": "x86_64",
-        "meta": {
-          "eol": "",
-          "release": "2022-11-15"
-        }
-      }
-    ]
+    "logo": "https://distrowatch.com/images/yvzhuwbpy/fedora.png",
+    "logo64": "data:image/png;base64,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",
+    "versions": null
   }
 ]
