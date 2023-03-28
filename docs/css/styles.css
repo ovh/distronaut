@@ -101,6 +101,19 @@ main {
     background-color: rgb(133, 217, 253);
     color: rgb(0, 24, 94);
 }
+.tile .logo {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 16px;
+}
+.tile .logo img {
+    width: 72px;
+    height: 72px;
+}
+.tile .logo img.absent {
+    border-radius: 50%;
+    opacity: .25;
+}
 .tile .title {
     line-height: 1.25;
     letter-spacing: .12px;

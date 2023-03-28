@@ -46,7 +46,9 @@
                     <transition-group name="fade">
                         <div class="tile" v-for="distro in distributions" @click="selected = distro" :key="`${distro.source}-${distro.distribution}`">
                             <div>
-                                <img v-if="false" :src="`${distro.logo}`" alt="">
+                                <div class="logo">
+                                    <img :class="{absent:!distro.logo64}" :src="distro.logo64 || 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mOcOnfpfwAGfgLYttYINwAAAABJRU5ErkJggg=='"/>
+                                </div>
                                 <div class="title">
                                     <span>{{ distro.distribution }}</span>
                                     <div class="label-success">
