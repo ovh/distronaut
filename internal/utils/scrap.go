@@ -210,7 +210,6 @@ func scrapHashes(links []*Link, pats map[string]string) {
 		if hash != "" {
 			link.Hash = fmt.Sprintf("%s:%s", pats[".hash.algo"], hash)
 			link.Hashfile = hlink
-			fmt.Sprintf("........... %+v", link)
 		}
 	}
 }
