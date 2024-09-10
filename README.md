@@ -27,20 +27,23 @@ Output is similar to below:
 ```json
 [
   {
-    "Source": "Debian",
-    "Family": "Linux",
-    "Distribution": "Debian (formerly Debian GNU/Linux)",
-    "Website": "http://www.debian.org/",
-    "Documentation": "http://www.debian.org/doc/",
-    "Status": "Active",
-    "Versions": [
+    "source": "Debian",
+    "family": "Linux",
+    "distribution": "Debian (formerly Debian GNU/Linux)",
+    "website": "http://www.debian.org/",
+    "documentation": "http://www.debian.org/doc/",
+    "status": "Active",
+    "logo": "https://distrowatch.com/images/yvzhuwbpy/debian.png",
+    "logo64": "data:image/png;base64,...",
+    "versions": [
       {
-        "Url": "https://cdimage.debian.org/debian-cd/11.4.0/amd64/iso-cd/debian-11.4.0-amd64-netinst.iso",
-        "Hash": "sha256:d490a35d36030592839f24e468a5b818c919943967012037d6ab3d65d030ef7f",
-        "Version": "11.4.0",
-        "Arch": "amd64",
-        "Meta": {
-          "release": "2021-08-14"
+        "url": "https://cdimage.debian.org/cdimage/archive/12.6.0/amd64/iso-cd/debian-12.6.0-amd64-netinst.iso",
+        "hash": "sha256:ade3a4acc465f59ca2496344aab72455945f3277a52afc5a2cae88cdc370fa12",
+        "hashfile": "https://cdimage.debian.org/cdimage/archive/12.6.0/amd64/iso-cd/SHA256SUMS",
+        "version": "12.6.0",
+        "arch": "amd64",
+        "meta": {
+          "release": "2023-06-10"
         }
       }
     ]
