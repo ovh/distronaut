@@ -15,10 +15,11 @@ import (
 
 // Link structure
 type Link struct {
-	Url     string `json:"url"`
-	Hash    string `json:"hash"`
-	Version string `json:"version"`
-	Arch    string `json:"arch"`
+	Url      string `json:"url"`
+	Hash     string `json:"hash"`
+	Hashfile string `json:"hashfile"`
+	Version  string `json:"version"`
+	Arch     string `json:"arch"`
 }
 
 // Version regex
@@ -208,6 +209,8 @@ func scrapHashes(links []*Link, pats map[string]string) {
 		hash := RegexCapture(scrapPattern(pats[".hash.pattern"], vars), string(body))
 		if hash != "" {
 			link.Hash = fmt.Sprintf("%s:%s", pats[".hash.algo"], hash)
+			link.Hashfile = hlink
+			fmt.Sprintf("........... %+v", link)
 		}
 	}
 }
