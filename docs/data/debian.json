@@ -12,6 +12,7 @@
       {
         "url": "https://cdimage.debian.org/cdimage/archive/5.0.0/amd64/iso-cd/debian-500-amd64-netinst.iso",
         "hash": "sha256:a8a091662a6bffa105cafc0bf7b6678330c566c0de41098f263b6c15b2729fe7",
+        "hashfile": "https://cdimage.debian.org/cdimage/archive/5.0.0/amd64/iso-cd/SHA256SUMS",
         "version": "5.0.0",
         "arch": "amd64",
         "meta": {
@@ -22,6 +23,7 @@
       {
         "url": "https://cdimage.debian.org/cdimage/archive/5.0.1/amd64/iso-cd/debian-501-amd64-netinst.iso",
         "hash": "sha256:79b00e8a191e9bc9cbb334936f4ff67ea636899db034ca00b4f8984134615ce7",
+        "hashfile": "https://cdimage.debian.org/cdimage/archive/5.0.1/amd64/iso-cd/SHA256SUMS",
         "version": "5.0.1",
         "arch": "amd64",
         "meta": {
@@ -32,6 +34,7 @@
       {
         "url": "https://cdimage.debian.org/cdimage/archive/5.0.2/amd64/iso-cd/debian-502-amd64-netinst.iso",
         "hash": "sha256:c5f866eaa12473cc006be4332f73ebcfd1b8d36a273e756bbaa32d4c220ebe40",
+        "hashfile": "https://cdimage.debian.org/cdimage/archive/5.0.2/amd64/iso-cd/SHA256SUMS",
         "version": "5.0.2",
         "arch": "amd64",
         "meta": {
@@ -42,6 +45,7 @@
       {
         "url": "https://cdimage.debian.org/cdimage/archive/5.0.3/amd64/iso-cd/debian-503-amd64-netinst.iso",
         "hash": "sha256:e923163ee2620f094eb504d532036831f65108215a08c3692d0881623a4bfe86",
+        "hashfile": "https://cdimage.debian.org/cdimage/archive/5.0.3/amd64/iso-cd/SHA256SUMS",
         "version": "5.0.3",
         "arch": "amd64",
         "meta": {
@@ -52,6 +56,7 @@
       {
         "url": "https://cdimage.debian.org/cdimage/archive/5.0.4/amd64/iso-cd/debian-504-amd64-netinst.iso",
         "hash": "sha256:f19135b4fa89c0182d7aecc73647b0d4aea6862b159678645384ab072e16cbdb",
+        "hashfile": "https://cdimage.debian.org/cdimage/archive/5.0.4/amd64/iso-cd/SHA256SUMS",
         "version": "5.0.4",
         "arch": "amd64",
         "meta": {
@@ -62,6 +67,7 @@
       {
         "url": "https://cdimage.debian.org/cdimage/archive/5.0.5/amd64/iso-cd/debian-505-amd64-netinst.iso",
         "hash": "sha256:111039bd95fb68a0426c8dcb1f4ae2d147ade092d01f9f2a3bfe790849b0d02a",
+        "hashfile": "https://cdimage.debian.org/cdimage/archive/5.0.5/amd64/iso-cd/SHA256SUMS",
         "version": "5.0.5",
         "arch": "amd64",
         "meta": {
@@ -72,6 +78,7 @@
       {
         "url": "https://cdimage.debian.org/cdimage/archive/5.0.6/amd64/iso-cd/debian-506-amd64-netinst.iso",
         "hash": "sha256:e337ebb9f0cba5f6ea1323fe3de4f12bfd14ee9126c04f0e8183184ea6b4cbaa",
+        "hashfile": "https://cdimage.debian.org/cdimage/archive/5.0.6/amd64/iso-cd/SHA256SUMS",
         "version": "5.0.6",
         "arch": "amd64",
         "meta": {
@@ -82,6 +89,7 @@
       {
         "url": "https://cdimage.debian.org/cdimage/archive/5.0.7/amd64/iso-cd/debian-507-amd64-netinst.iso",
         "hash": "sha256:cebd9dc6daaaa30b232b19717826a0dc7845fea29bafc4b8db9577aa397ede0c",
+        "hashfile": "https://cdimage.debian.org/cdimage/archive/5.0.7/amd64/iso-cd/SHA256SUMS",
         "version": "5.0.7",
         "arch": "amd64",
         "meta": {
@@ -92,6 +100,7 @@
       {
         "url": "https://cdimage.debian.org/cdimage/archive/5.0.8/amd64/iso-cd/debian-508-amd64-netinst.iso",
         "hash": "sha256:c6447d36098e39e4b45bd4e14c0fdd7dce79b6e150cefc2f297597592cfb5ff5",
+        "hashfile": "https://cdimage.debian.org/cdimage/archive/5.0.8/amd64/iso-cd/SHA256SUMS",
         "version": "5.0.8",
         "arch": "amd64",
         "meta": {
@@ -102,6 +111,7 @@
       {
         "url": "https://cdimage.debian.org/cdimage/archive/5.0.9/amd64/iso-cd/debian-509-amd64-netinst.iso",
         "hash": "sha256:ab80da936c5d8b0062f5c659fd7c578396ec975adaf56101884fd2b24329d096",
+        "hashfile": "https://cdimage.debian.org/cdimage/archive/5.0.9/amd64/iso-cd/SHA256SUMS",
         "version": "5.0.9",
         "arch": "amd64",
         "meta": {
@@ -112,6 +122,7 @@
       {
         "url": "https://cdimage.debian.org/cdimage/archive/5.0.10/amd64/iso-cd/debian-5010-amd64-netinst.iso",
         "hash": "sha256:4406a75c885b0dc395d1c01291cd873be4ec784f0a20717508553486fae4d53f",
+        "hashfile": "https://cdimage.debian.org/cdimage/archive/5.0.10/amd64/iso-cd/SHA256SUMS",
         "version": "5.0.10",
         "arch": "amd64",
         "meta": {
@@ -122,6 +133,7 @@
       {
         "url": "https://cdimage.debian.org/cdimage/archive/6.0.10/amd64/iso-cd/debian-6.0.10-amd64-netinst.iso",
         "hash": "sha256:e7563ecea95e1352f0c36cc2fcac1a3bb13ce11715e5c4c9712ff4f05128f896",
+        "hashfile": "https://cdimage.debian.org/cdimage/archive/6.0.10/amd64/iso-cd/SHA256SUMS",
         "version": "6.0.10",
         "arch": "amd64",
         "meta": {
@@ -132,6 +144,7 @@
       {
         "url": "https://cdimage.debian.org/cdimage/archive/7.11.0/amd64/iso-cd/debian-7.11.0-amd64-netinst.iso",
         "hash": "sha256:62876fb786f203bc732ec1bd2ca4c8faea19d0a97c5936d69f3406ef92ff49bd",
+        "hashfile": "https://cdimage.debian.org/cdimage/archive/7.11.0/amd64/iso-cd/SHA256SUMS",
         "version": "7.11.0",
         "arch": "amd64",
         "meta": {
@@ -142,6 +155,7 @@
       {
         "url": "https://cdimage.debian.org/cdimage/archive/8.10.0/amd64/iso-cd/debian-8.10.0-amd64-netinst.iso",
         "hash": "sha256:896cc42998edf65f1db4eba83581941fb2a584f2214976432b841af96b17ccda",
+        "hashfile": "https://cdimage.debian.org/cdimage/archive/8.10.0/amd64/iso-cd/SHA256SUMS",
         "version": "8.10.0",
         "arch": "amd64",
         "meta": {
@@ -152,6 +166,7 @@
       {
         "url": "https://cdimage.debian.org/cdimage/archive/8.11.0/amd64/iso-cd/debian-8.11.0-amd64-netinst.iso",
         "hash": "sha256:ea799ed959d77359783e7922ed4c94a7437b083a4ce6f09e9fe41a7af6ba60df",
+        "hashfile": "https://cdimage.debian.org/cdimage/archive/8.11.0/amd64/iso-cd/SHA256SUMS",
         "version": "8.11.0",
         "arch": "amd64",
         "meta": {
@@ -162,6 +177,7 @@
       {
         "url": "https://cdimage.debian.org/cdimage/archive/8.11.1/amd64/iso-cd/debian-8.11.1-amd64-netinst.iso",
         "hash": "sha256:ea444d6f8ac95fd51d2aedb8015c57410d1ad19b494cedec6914c17fda02733c",
+        "hashfile": "https://cdimage.debian.org/cdimage/archive/8.11.1/amd64/iso-cd/SHA256SUMS",
         "version": "8.11.1",
         "arch": "amd64",
         "meta": {
@@ -172,6 +188,7 @@
       {
         "url": "https://cdimage.debian.org/cdimage/archive/9.2.1/amd64/iso-cd/debian-9.2.1-amd64-netinst.iso",
         "hash": "sha256:ec78bc48b48d676775b60eda41528ec33c151c2ce7414a12b13d9b73d34de544",
+        "hashfile": "https://cdimage.debian.org/cdimage/archive/9.2.1/amd64/iso-cd/SHA256SUMS",
         "version": "9.2.1",
         "arch": "amd64",
         "meta": {
@@ -182,6 +199,7 @@
       {
         "url": "https://cdimage.debian.org/cdimage/archive/9.13.0/amd64/iso-cd/debian-9.13.0-amd64-netinst.iso",
         "hash": "sha256:71c7e9eb292acc880f84605b1ca2b997f25737fe0a43fc9586f61d35cd2eb43b",
+        "hashfile": "https://cdimage.debian.org/cdimage/archive/9.13.0/amd64/iso-cd/SHA256SUMS",
         "version": "9.13.0",
         "arch": "amd64",
         "meta": {
@@ -192,6 +210,7 @@
       {
         "url": "https://cdimage.debian.org/cdimage/archive/10.7.0/amd64/iso-cd/debian-10.7.0-amd64-netinst.iso",
         "hash": "sha256:b317d87b0a3d5b568f48a92dcabfc4bc51fe58d9f67ca13b013f1b8329d1306d",
+        "hashfile": "https://cdimage.debian.org/cdimage/archive/10.7.0/amd64/iso-cd/SHA256SUMS",
         "version": "10.7.0",
         "arch": "amd64",
         "meta": {
@@ -202,6 +221,7 @@
       {
         "url": "https://cdimage.debian.org/cdimage/archive/10.8.0/amd64/iso-cd/debian-10.8.0-amd64-netinst.iso",
         "hash": "sha256:396553f005ad9f86a51e246b1540c60cef676f9c71b95e22b753faef59f89bee",
+        "hashfile": "https://cdimage.debian.org/cdimage/archive/10.8.0/amd64/iso-cd/SHA256SUMS",
         "version": "10.8.0",
         "arch": "amd64",
         "meta": {
@@ -212,6 +232,7 @@
       {
         "url": "https://cdimage.debian.org/cdimage/archive/10.9.0/amd64/iso-cd/debian-10.9.0-amd64-netinst.iso",
         "hash": "sha256:8660593d10de0ce7577c9de4dab886ff540bc9843659c8879d8eea0ab224c109",
+        "hashfile": "https://cdimage.debian.org/cdimage/archive/10.9.0/amd64/iso-cd/SHA256SUMS",
         "version": "10.9.0",
         "arch": "amd64",
         "meta": {
@@ -222,6 +243,7 @@
       {
         "url": "https://cdimage.debian.org/cdimage/archive/10.10.0/amd64/iso-cd/debian-10.10.0-amd64-netinst.iso",
         "hash": "sha256:c433254a7c5b5b9e6a05f9e1379a0bd6ab3323f89b56537b684b6d1bd1f8b6ad",
+        "hashfile": "https://cdimage.debian.org/cdimage/archive/10.10.0/amd64/iso-cd/SHA256SUMS",
         "version": "10.10.0",
         "arch": "amd64",
         "meta": {
@@ -232,6 +254,7 @@
       {
         "url": "https://cdimage.debian.org/cdimage/archive/10.11.0/amd64/iso-cd/debian-10.11.0-amd64-netinst.iso",
         "hash": "sha256:133430141272d8bf96cfb10b6bfd1c945f5a59ea0efc2bcb56d1033c7f2866ea",
+        "hashfile": "https://cdimage.debian.org/cdimage/archive/10.11.0/amd64/iso-cd/SHA256SUMS",
         "version": "10.11.0",
         "arch": "amd64",
         "meta": {
@@ -242,6 +265,7 @@
       {
         "url": "https://cdimage.debian.org/cdimage/archive/10.12.0/amd64/iso-cd/debian-10.12.0-amd64-netinst.iso",
         "hash": "sha256:3cdec5aa9865a768434e4ad2b9fba0e8ca82fc297ceb4137518c53045d5d4af8",
+        "hashfile": "https://cdimage.debian.org/cdimage/archive/10.12.0/amd64/iso-cd/SHA256SUMS",
         "version": "10.12.0",
         "arch": "amd64",
         "meta": {
@@ -252,6 +276,7 @@
       {
         "url": "https://cdimage.debian.org/cdimage/archive/10.13.0/amd64/iso-cd/debian-10.13.0-amd64-netinst.iso",
         "hash": "sha256:75aa64071060402a594dcf1e14afd669ca0f8bf757b56d4c9c1a31b8f7c8f931",
+        "hashfile": "https://cdimage.debian.org/cdimage/archive/10.13.0/amd64/iso-cd/SHA256SUMS",
         "version": "10.13.0",
         "arch": "amd64",
         "meta": {
@@ -262,6 +287,7 @@
       {
         "url": "https://cdimage.debian.org/cdimage/archive/11.0.0/amd64/iso-cd/debian-11.0.0-amd64-netinst.iso",
         "hash": "sha256:ae6d563d2444665316901fe7091059ac34b8f67ba30f9159f7cef7d2fdc5bf8a",
+        "hashfile": "https://cdimage.debian.org/cdimage/archive/11.0.0/amd64/iso-cd/SHA256SUMS",
         "version": "11.0.0",
         "arch": "amd64",
         "meta": {
@@ -272,6 +298,7 @@
       {
         "url": "https://cdimage.debian.org/cdimage/archive/11.1.0/amd64/iso-cd/debian-11.1.0-amd64-netinst.iso",
         "hash": "sha256:8488abc1361590ee7a3c9b00ec059b29dfb1da40f8ba4adf293c7a30fa943eb2",
+        "hashfile": "https://cdimage.debian.org/cdimage/archive/11.1.0/amd64/iso-cd/SHA256SUMS",
         "version": "11.1.0",
         "arch": "amd64",
         "meta": {
@@ -282,6 +309,7 @@
       {
         "url": "https://cdimage.debian.org/cdimage/archive/11.2.0/amd64/iso-cd/debian-11.2.0-amd64-netinst.iso",
         "hash": "sha256:45c9feabba213bdc6d72e7469de71ea5aeff73faea6bfb109ab5bad37c3b43bd",
+        "hashfile": "https://cdimage.debian.org/cdimage/archive/11.2.0/amd64/iso-cd/SHA256SUMS",
         "version": "11.2.0",
         "arch": "amd64",
         "meta": {
@@ -292,6 +320,7 @@
       {
         "url": "https://cdimage.debian.org/cdimage/archive/11.3.0/amd64/iso-cd/debian-11.3.0-amd64-netinst.iso",
         "hash": "sha256:7892981e1da216e79fb3a1536ce5ebab157afdd20048fe458f2ae34fbc26c19b",
+        "hashfile": "https://cdimage.debian.org/cdimage/archive/11.3.0/amd64/iso-cd/SHA256SUMS",
         "version": "11.3.0",
         "arch": "amd64",
         "meta": {
@@ -302,6 +331,7 @@
       {
         "url": "https://cdimage.debian.org/cdimage/archive/11.4.0/amd64/iso-cd/debian-11.4.0-amd64-netinst.iso",
         "hash": "sha256:d490a35d36030592839f24e468a5b818c919943967012037d6ab3d65d030ef7f",
+        "hashfile": "https://cdimage.debian.org/cdimage/archive/11.4.0/amd64/iso-cd/SHA256SUMS",
         "version": "11.4.0",
         "arch": "amd64",
         "meta": {
@@ -312,11 +342,144 @@
       {
         "url": "https://cdimage.debian.org/cdimage/archive/11.5.0/amd64/iso-cd/debian-11.5.0-amd64-netinst.iso",
         "hash": "sha256:e307d0e583b4a8f7e5b436f8413d4707dd4242b70aea61eb08591dc0378522f3",
+        "hashfile": "https://cdimage.debian.org/cdimage/archive/11.5.0/amd64/iso-cd/SHA256SUMS",
         "version": "11.5.0",
         "arch": "amd64",
         "meta": {
           "eol": "",
           "release": "2021-08-14"
+        }
+      },
+      {
+        "url": "https://cdimage.debian.org/cdimage/archive/11.6.0/amd64/iso-cd/debian-11.6.0-amd64-netinst.iso",
+        "hash": "sha256:e482910626b30f9a7de9b0cc142c3d4a079fbfa96110083be1d0b473671ce08d",
+        "hashfile": "https://cdimage.debian.org/cdimage/archive/11.6.0/amd64/iso-cd/SHA256SUMS",
+        "version": "11.6.0",
+        "arch": "amd64",
+        "meta": {
+          "eol": "",
+          "release": "2021-08-14"
+        }
+      },
+      {
+        "url": "https://cdimage.debian.org/cdimage/archive/11.7.0/amd64/iso-cd/debian-11.7.0-amd64-netinst.iso",
+        "hash": "sha256:eb3f96fd607e4b67e80f4fc15670feb7d9db5be50f4ca8d0bf07008cb025766b",
+        "hashfile": "https://cdimage.debian.org/cdimage/archive/11.7.0/amd64/iso-cd/SHA256SUMS",
+        "version": "11.7.0",
+        "arch": "amd64",
+        "meta": {
+          "eol": "",
+          "release": "2021-08-14"
+        }
+      },
+      {
+        "url": "https://cdimage.debian.org/cdimage/archive/11.8.0/amd64/iso-cd/debian-11.8.0-amd64-netinst.iso",
+        "hash": "sha256:d7a74813a734083df30c8d35784926deaa36bc41e5c0766388e9f591ab056b72",
+        "hashfile": "https://cdimage.debian.org/cdimage/archive/11.8.0/amd64/iso-cd/SHA256SUMS",
+        "version": "11.8.0",
+        "arch": "amd64",
+        "meta": {
+          "eol": "",
+          "release": "2021-08-14"
+        }
+      },
+      {
+        "url": "https://cdimage.debian.org/cdimage/archive/11.9.0/amd64/iso-cd/debian-11.9.0-amd64-netinst.iso",
+        "hash": "sha256:01c540225250d42cda3809d7130d0c27e934c8aca260d01a86d33dee19623b0f",
+        "hashfile": "https://cdimage.debian.org/cdimage/archive/11.9.0/amd64/iso-cd/SHA256SUMS",
+        "version": "11.9.0",
+        "arch": "amd64",
+        "meta": {
+          "eol": "",
+          "release": "2021-08-14"
+        }
+      },
+      {
+        "url": "https://cdimage.debian.org/cdimage/archive/11.10.0/amd64/iso-cd/debian-11.10.0-amd64-netinst.iso",
+        "hash": "sha256:721ef40ba86c01b555ea85bb4ca7917d28cb65d56e57a0f56af90443f0aec6a3",
+        "hashfile": "https://cdimage.debian.org/cdimage/archive/11.10.0/amd64/iso-cd/SHA256SUMS",
+        "version": "11.10.0",
+        "arch": "amd64",
+        "meta": {
+          "eol": "",
+          "release": "2021-08-14"
+        }
+      },
+      {
+        "url": "https://cdimage.debian.org/cdimage/archive/11.11.0/amd64/iso-cd/debian-11.11.0-amd64-netinst.iso",
+        "hash": "sha256:cd5b2a6fc22050affa1d141adb3857af07e94ff886dca1ce17214e2761a3b316",
+        "hashfile": "https://cdimage.debian.org/cdimage/archive/11.11.0/amd64/iso-cd/SHA256SUMS",
+        "version": "11.11.0",
+        "arch": "amd64",
+        "meta": {
+          "eol": "",
+          "release": "2021-08-14"
+        }
+      },
+      {
+        "url": "https://cdimage.debian.org/cdimage/archive/12.0.0/amd64/iso-cd/debian-12.0.0-amd64-netinst.iso",
+        "hash": "sha256:3b0e9718e3653435f20d8c2124de6d363a51a1fd7f911b9ca0c6db6b3d30d53e",
+        "hashfile": "https://cdimage.debian.org/cdimage/archive/12.0.0/amd64/iso-cd/SHA256SUMS",
+        "version": "12.0.0",
+        "arch": "amd64",
+        "meta": {
+          "eol": "",
+          "release": "2023-06-10"
+        }
+      },
+      {
+        "url": "https://cdimage.debian.org/cdimage/archive/12.1.0/amd64/iso-cd/debian-12.1.0-amd64-netinst.iso",
+        "hash": "sha256:9f181ae12b25840a508786b1756c6352a0e58484998669288c4eec2ab16b8559",
+        "hashfile": "https://cdimage.debian.org/cdimage/archive/12.1.0/amd64/iso-cd/SHA256SUMS",
+        "version": "12.1.0",
+        "arch": "amd64",
+        "meta": {
+          "eol": "",
+          "release": "2023-06-10"
+        }
+      },
+      {
+        "url": "https://cdimage.debian.org/cdimage/archive/12.2.0/amd64/iso-cd/debian-12.2.0-amd64-netinst.iso",
+        "hash": "sha256:23ab444503069d9ef681e3028016250289a33cc7bab079259b73100daee0af66",
+        "hashfile": "https://cdimage.debian.org/cdimage/archive/12.2.0/amd64/iso-cd/SHA256SUMS",
+        "version": "12.2.0",
+        "arch": "amd64",
+        "meta": {
+          "eol": "",
+          "release": "2023-06-10"
+        }
+      },
+      {
+        "url": "https://cdimage.debian.org/cdimage/archive/12.4.0/amd64/iso-cd/debian-12.4.0-amd64-netinst.iso",
+        "hash": "sha256:64d727dd5785ae5fcfd3ae8ffbede5f40cca96f1580aaa2820e8b99dae989d94",
+        "hashfile": "https://cdimage.debian.org/cdimage/archive/12.4.0/amd64/iso-cd/SHA256SUMS",
+        "version": "12.4.0",
+        "arch": "amd64",
+        "meta": {
+          "eol": "",
+          "release": "2023-06-10"
+        }
+      },
+      {
+        "url": "https://cdimage.debian.org/cdimage/archive/12.5.0/amd64/iso-cd/debian-12.5.0-amd64-netinst.iso",
+        "hash": "sha256:013f5b44670d81280b5b1bc02455842b250df2f0c6763398feb69af1a805a14f",
+        "hashfile": "https://cdimage.debian.org/cdimage/archive/12.5.0/amd64/iso-cd/SHA256SUMS",
+        "version": "12.5.0",
+        "arch": "amd64",
+        "meta": {
+          "eol": "",
+          "release": "2023-06-10"
+        }
+      },
+      {
+        "url": "https://cdimage.debian.org/cdimage/archive/12.6.0/amd64/iso-cd/debian-12.6.0-amd64-netinst.iso",
+        "hash": "sha256:ade3a4acc465f59ca2496344aab72455945f3277a52afc5a2cae88cdc370fa12",
+        "hashfile": "https://cdimage.debian.org/cdimage/archive/12.6.0/amd64/iso-cd/SHA256SUMS",
+        "version": "12.6.0",
+        "arch": "amd64",
+        "meta": {
+          "eol": "",
+          "release": "2023-06-10"
         }
       }
     ]

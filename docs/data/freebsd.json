@@ -10,52 +10,58 @@
     "logo64": "data:image/png;base64,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",
     "versions": [
       {
-        "url": "https://download.freebsd.org/releases/amd64/amd64/ISO-IMAGES/12.3/FreeBSD-12.3-RELEASE-amd64-dvd1.iso",
-        "hash": "sha256:ab214a24c8fb3c2e0ca94eb09493a504d48a1fc5d85eeda1bc9c179f83c877c2",
-        "version": "12.3",
-        "arch": "amd64",
-        "meta": {}
-      },
-      {
-        "url": "https://download.freebsd.org/releases/amd64/amd64/ISO-IMAGES/12.4/FreeBSD-12.4-RELEASE-amd64-dvd1.iso",
-        "hash": "sha256:f889113f4cb0dc50b443b3e5753861cfda1b6c08beb0c9bfc6b212572f19dc9f",
-        "version": "12.4",
-        "arch": "amd64",
-        "meta": {
-          "eol": "2024-06",
-          "release": "2022-12-05"
-        }
-      },
-      {
-        "url": "https://download.freebsd.org/releases/amd64/amd64/ISO-IMAGES/13.0/FreeBSD-13.0-RELEASE-amd64-dvd1.iso",
-        "hash": "sha256:d3df1818c0b90ae8d4c88c447dd158c3c3a3ddada4171ac7b0fe55baa040c821",
-        "version": "13.0",
-        "arch": "amd64",
-        "meta": {}
-      },
-      {
-        "url": "https://download.freebsd.org/releases/amd64/amd64/ISO-IMAGES/13.1/FreeBSD-13.1-RELEASE-amd64-dvd1.iso",
-        "hash": "sha256:5b29c2cd5a604ad24810c994027ec13c9efc53778a307831f6181dfdaf02939f",
-        "version": "13.1",
+        "url": "https://download.freebsd.org/releases/amd64/amd64/ISO-IMAGES/13.3/FreeBSD-13.3-RELEASE-amd64-dvd1.iso",
+        "hash": "sha256:4064f704baadf204ab4f75dda987e717b8da252840675ee5feef8f5be7e9356c",
+        "hashfile": "https://download.freebsd.org/releases/amd64/amd64/ISO-IMAGES/13.3/CHECKSUM.SHA256-FreeBSD-13.3-RELEASE-amd64",
+        "version": "13.3",
         "arch": "amd64",
         "meta": {
           "eol": "2026-01",
-          "release": "2022-05-16"
+          "release": "2024-03-05"
         }
       },
       {
-        "url": "https://download.freebsd.org/releases/amd64/amd64/ISO-IMAGES/13.2/FreeBSD-13.2-RC4-amd64-dvd1.iso",
-        "hash": "sha256:763121451ff08dbe1db897d8b59e0065ad6d6764436c2f64a5ab7dc76791d6c0",
-        "version": "13.2",
+        "url": "https://download.freebsd.org/releases/amd64/amd64/ISO-IMAGES/13.4/FreeBSD-13.4-RC1-amd64-dvd1.iso",
+        "hash": "sha256:6d87d2c55cec8146e0f5047e31bc50ee5e88713bca87963bda963c8e8155f12e",
+        "hashfile": "https://download.freebsd.org/releases/amd64/amd64/ISO-IMAGES/13.4/CHECKSUM.SHA256-FreeBSD-13.4-RC1-amd64",
+        "version": "13.4",
         "arch": "amd64",
         "meta": {}
       },
       {
-        "url": "https://download.freebsd.org/releases/amd64/amd64/ISO-IMAGES/13.2/FreeBSD-13.2-RC5-amd64-dvd1.iso",
+        "url": "https://download.freebsd.org/releases/amd64/amd64/ISO-IMAGES/13.4/FreeBSD-13.4-RC2-amd64-dvd1.iso",
         "hash": "",
-        "version": "13.2",
+        "hashfile": "",
+        "version": "13.4",
         "arch": "amd64",
         "meta": {}
+      },
+      {
+        "url": "https://download.freebsd.org/releases/amd64/amd64/ISO-IMAGES/13.4/FreeBSD-13.4-RC3-amd64-dvd1.iso",
+        "hash": "",
+        "hashfile": "",
+        "version": "13.4",
+        "arch": "amd64",
+        "meta": {}
+      },
+      {
+        "url": "https://download.freebsd.org/releases/amd64/amd64/ISO-IMAGES/14.0/FreeBSD-14.0-RELEASE-amd64-dvd1.iso",
+        "hash": "sha256:de4fa9d7d199051860b80b84fbae51279a5ff5d92a2729a52bf0a3f79a5feb99",
+        "hashfile": "https://download.freebsd.org/releases/amd64/amd64/ISO-IMAGES/14.0/CHECKSUM.SHA256-FreeBSD-14.0-RELEASE-amd64",
+        "version": "14.0",
+        "arch": "amd64",
+        "meta": {}
+      },
+      {
+        "url": "https://download.freebsd.org/releases/amd64/amd64/ISO-IMAGES/14.1/FreeBSD-14.1-RELEASE-amd64-dvd1.iso",
+        "hash": "sha256:af86ef41bf5e374d0d1022bb45a9541b400756eedcda1eb241a8fc0a3ed59ef1",
+        "hashfile": "https://download.freebsd.org/releases/amd64/amd64/ISO-IMAGES/14.1/CHECKSUM.SHA256-FreeBSD-14.1-RELEASE-amd64",
+        "version": "14.1",
+        "arch": "amd64",
+        "meta": {
+          "eol": "",
+          "release": "2023-11-14"
+        }
       }
     ]
   }

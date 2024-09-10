@@ -12,6 +12,7 @@
       {
         "url": "https://releases.ubuntu.com/14.04.6/ubuntu-14.04.6-server-amd64.iso",
         "hash": "sha256:b17d7c1e9d0321ad5810ba77b69aef43f0f29a5422b08120e6ee0576c4527c0e",
+        "hashfile": "https://releases.ubuntu.com/14.04.6/SHA256SUMS",
         "version": "14.04.6",
         "arch": "amd64",
         "meta": {
@@ -22,6 +23,7 @@
       {
         "url": "https://releases.ubuntu.com/14.04.6/ubuntu-14.04.6-server-i386.iso",
         "hash": "sha256:b17d7c1e9d0321ad5810ba77b69aef43f0f29a5422b08120e6ee0576c4527c0e",
+        "hashfile": "https://releases.ubuntu.com/14.04.6/SHA256SUMS",
         "version": "14.04.6",
         "arch": "i386",
         "meta": {
@@ -32,6 +34,7 @@
       {
         "url": "https://releases.ubuntu.com/14.04/ubuntu-14.04.6-server-amd64.iso",
         "hash": "sha256:b17d7c1e9d0321ad5810ba77b69aef43f0f29a5422b08120e6ee0576c4527c0e",
+        "hashfile": "https://releases.ubuntu.com/14.04/SHA256SUMS",
         "version": "14.04",
         "arch": "amd64",
         "meta": {
@@ -42,6 +45,7 @@
       {
         "url": "https://releases.ubuntu.com/14.04/ubuntu-14.04.6-server-i386.iso",
         "hash": "sha256:b17d7c1e9d0321ad5810ba77b69aef43f0f29a5422b08120e6ee0576c4527c0e",
+        "hashfile": "https://releases.ubuntu.com/14.04/SHA256SUMS",
         "version": "14.04",
         "arch": "i386",
         "meta": {
@@ -52,6 +56,7 @@
       {
         "url": "https://releases.ubuntu.com/16.04.7/ubuntu-16.04.7-server-amd64.iso",
         "hash": "sha256:7509cabb2f9f6ba0a95f8454d432be2ef26679d31ce35baa626acc5321460fab",
+        "hashfile": "https://releases.ubuntu.com/16.04.7/SHA256SUMS",
         "version": "16.04.7",
         "arch": "amd64",
         "meta": {
@@ -62,6 +67,7 @@
       {
         "url": "https://releases.ubuntu.com/16.04.7/ubuntu-16.04.6-server-i386.iso",
         "hash": "sha256:7509cabb2f9f6ba0a95f8454d432be2ef26679d31ce35baa626acc5321460fab",
+        "hashfile": "https://releases.ubuntu.com/16.04.7/SHA256SUMS",
         "version": "16.04.7",
         "arch": "i386",
         "meta": {
@@ -72,6 +78,7 @@
       {
         "url": "https://releases.ubuntu.com/16.04/ubuntu-16.04.7-server-amd64.iso",
         "hash": "sha256:7509cabb2f9f6ba0a95f8454d432be2ef26679d31ce35baa626acc5321460fab",
+        "hashfile": "https://releases.ubuntu.com/16.04/SHA256SUMS",
         "version": "16.04",
         "arch": "amd64",
         "meta": {
@@ -82,6 +89,7 @@
       {
         "url": "https://releases.ubuntu.com/16.04/ubuntu-16.04.6-server-i386.iso",
         "hash": "sha256:7509cabb2f9f6ba0a95f8454d432be2ef26679d31ce35baa626acc5321460fab",
+        "hashfile": "https://releases.ubuntu.com/16.04/SHA256SUMS",
         "version": "16.04",
         "arch": "i386",
         "meta": {
@@ -92,6 +100,7 @@
       {
         "url": "https://releases.ubuntu.com/18.04.6/ubuntu-18.04.6-live-server-amd64.iso",
         "hash": "sha256:6c647b1ab4318e8c560d5748f908e108be654bad1e165f7cf4f3c1fc43995934",
+        "hashfile": "https://releases.ubuntu.com/18.04.6/SHA256SUMS",
         "version": "18.04.6",
         "arch": "amd64",
         "meta": {
@@ -102,6 +111,7 @@
       {
         "url": "https://releases.ubuntu.com/18.04/ubuntu-18.04.6-live-server-amd64.iso",
         "hash": "sha256:6c647b1ab4318e8c560d5748f908e108be654bad1e165f7cf4f3c1fc43995934",
+        "hashfile": "https://releases.ubuntu.com/18.04/SHA256SUMS",
         "version": "18.04",
         "arch": "amd64",
         "meta": {
@@ -112,6 +122,7 @@
       {
         "url": "https://releases.ubuntu.com/20.04.6/ubuntu-20.04.6-live-server-amd64.iso",
         "hash": "sha256:b8f31413336b9393ad5d8ef0282717b2ab19f007df2e9ed5196c13d8f9153c8b",
+        "hashfile": "https://releases.ubuntu.com/20.04.6/SHA256SUMS",
         "version": "20.04.6",
         "arch": "amd64",
         "meta": {
@@ -122,6 +133,7 @@
       {
         "url": "https://releases.ubuntu.com/20.04/ubuntu-20.04.6-live-server-amd64.iso",
         "hash": "sha256:b8f31413336b9393ad5d8ef0282717b2ab19f007df2e9ed5196c13d8f9153c8b",
+        "hashfile": "https://releases.ubuntu.com/20.04/SHA256SUMS",
         "version": "20.04",
         "arch": "amd64",
         "meta": {
@@ -130,9 +142,10 @@
         }
       },
       {
-        "url": "https://releases.ubuntu.com/22.04.2/ubuntu-22.04.2-live-server-amd64.iso",
-        "hash": "sha256:5e38b55d57d94ff029719342357325ed3bda38fa80054f9330dc789cd2d43931",
-        "version": "22.04.2",
+        "url": "https://releases.ubuntu.com/22.04.4/ubuntu-22.04.4-live-server-amd64.iso",
+        "hash": "sha256:45f873de9f8cb637345d6e66a583762730bbea30277ef7b32c9c3bd6700a32b2",
+        "hashfile": "https://releases.ubuntu.com/22.04.4/SHA256SUMS",
+        "version": "22.04.4",
         "arch": "amd64",
         "meta": {
           "eol": "2027-04",
@@ -140,8 +153,9 @@
         }
       },
       {
-        "url": "https://releases.ubuntu.com/22.04/ubuntu-22.04.2-live-server-amd64.iso",
-        "hash": "sha256:5e38b55d57d94ff029719342357325ed3bda38fa80054f9330dc789cd2d43931",
+        "url": "https://releases.ubuntu.com/22.04/ubuntu-22.04.4-live-server-amd64.iso",
+        "hash": "sha256:45f873de9f8cb637345d6e66a583762730bbea30277ef7b32c9c3bd6700a32b2",
+        "hashfile": "https://releases.ubuntu.com/22.04/SHA256SUMS",
         "version": "22.04",
         "arch": "amd64",
         "meta": {
@@ -150,13 +164,47 @@
         }
       },
       {
-        "url": "https://releases.ubuntu.com/22.10/ubuntu-22.10-live-server-amd64.iso",
-        "hash": "sha256:874452797430a94ca240c95d8503035aa145bd03ef7d84f9b23b78f3c5099aed",
-        "version": "22.10",
+        "url": "https://releases.ubuntu.com/23.10.1/ubuntu-23.10-live-server-amd64.iso",
+        "hash": "sha256:d2fb80d9ce77511ed500bcc1f813e6f676d4a3577009dfebce24269ca23346a5",
+        "hashfile": "https://releases.ubuntu.com/23.10.1/SHA256SUMS",
+        "version": "23.10.1",
         "arch": "amd64",
         "meta": {
-          "eol": "2023-07",
-          "release": "2022-10-20"
+          "eol": "2024-07",
+          "release": "2023-10-12"
+        }
+      },
+      {
+        "url": "https://releases.ubuntu.com/23.10/ubuntu-23.10-live-server-amd64.iso",
+        "hash": "sha256:d2fb80d9ce77511ed500bcc1f813e6f676d4a3577009dfebce24269ca23346a5",
+        "hashfile": "https://releases.ubuntu.com/23.10/SHA256SUMS",
+        "version": "23.10",
+        "arch": "amd64",
+        "meta": {
+          "eol": "2024-07",
+          "release": "2023-10-12"
+        }
+      },
+      {
+        "url": "https://releases.ubuntu.com/24.04.1/ubuntu-24.04.1-live-server-amd64.iso",
+        "hash": "sha256:e240e4b801f7bb68c20d1356b60968ad0c33a41d00d828e74ceb3364a0317be9",
+        "hashfile": "https://releases.ubuntu.com/24.04.1/SHA256SUMS",
+        "version": "24.04.1",
+        "arch": "amd64",
+        "meta": {
+          "eol": "2029-04",
+          "release": "2024-04-25"
+        }
+      },
+      {
+        "url": "https://releases.ubuntu.com/24.04/ubuntu-24.04.1-live-server-amd64.iso",
+        "hash": "sha256:e240e4b801f7bb68c20d1356b60968ad0c33a41d00d828e74ceb3364a0317be9",
+        "hashfile": "https://releases.ubuntu.com/24.04/SHA256SUMS",
+        "version": "24.04",
+        "arch": "amd64",
+        "meta": {
+          "eol": "2029-04",
+          "release": "2024-04-25"
         }
       }
     ]
