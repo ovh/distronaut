@@ -29,11 +29,12 @@ type Release struct {
 
 // Version structure
 type Version struct {
-	Url     string            `json:"url"`
-	Hash    string            `json:"hash"`
-	Version string            `json:"version"`
-	Arch    string            `json:"arch"`
-	Meta    map[string]string `json:"meta"`
+	Url      string            `json:"url"`
+	Hash     string            `json:"hash"`
+	Hashfile string            `json:"hashfile"`
+	Version  string            `json:"version"`
+	Arch     string            `json:"arch"`
+	Meta     map[string]string `json:"meta"`
 }
 
 // Source structure
@@ -154,7 +155,7 @@ func fetch(source string, uri string, pats map[string]string, bar *progressbar.P
 		bar.ChangeMax(bar.GetMax() + len(links))
 	}
 	for _, link := range links {
-		v := &Version{Url: link.Url, Hash: link.Hash, Version: link.Version, Arch: link.Arch}
+		v := &Version{Url: link.Url, Hash: link.Hash, Hashfile: link.Hashfile, Version: link.Version, Arch: link.Arch}
 		if bar != nil {
 			bar.Describe(fmt.Sprintf("checking: [cyan]%s[reset]", v.Version))
 		}
