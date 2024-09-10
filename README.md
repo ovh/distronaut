@@ -76,7 +76,7 @@ func main() {
 
 Open your configuration file and add a new entry, containing:
 - `name` is a friendly name for your new source (can also be used for filtering)
-- `url` is the source url pattern
+- `url` is the source URL pattern
   - each *route parameter* is indicated by a colon (`:`)
 - `patterns` is a map containing:
   - `:*` are regex patterns that are matched by defined *route parameter*
